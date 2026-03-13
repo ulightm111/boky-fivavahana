@@ -2,6 +2,26 @@
 /icons
 /raw
 /metadata
+
+# --------------------------------
+# Node modules (ignore everything)
+# --------------------------------
 node_modules/*
+
+# Keep only Android plugins required for Gradle build
 !node_modules/@capacitor/
+node_modules/@capacitor/*
+!node_modules/@capacitor/android/
+!node_modules/@capacitor/app/
+!node_modules/@capacitor/status-bar/
+!node_modules/@capacitor/toast/
 !node_modules/@capgo/
+node_modules/@capgo/*
+!node_modules/@capgo/capacitor-navigation-bar/
+
+# --------------------------------
+# Prevent F-Droid scanner errors
+# --------------------------------
+*.tar.gz
+*.tgz
+*.zip
