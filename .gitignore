@@ -1,5 +1,7 @@
-node_modules
 /www
 /icons
 /raw
 /metadata
+node_modules/*
+!node_modules/@capacitor/
+!node_modules/@capgo/
