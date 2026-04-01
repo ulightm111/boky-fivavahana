@@ -1,0 +1,3170 @@
+{
+  "songs": [
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 1,
+      "title": "AMBONY IANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ambony Ianao, ry Tompo",
+            "Ambonin' ny tany rehetra",
+            "Ambonin' ny'andriamanitra rehetra",
+            "Asandratro Ianao (3x), Tompo ô !"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Mendrika ho anao, Ry Tompo",
+            "Ny voninahitra rehetra",
+            "Ny hery sy ny haja rehetra",
+            "Asandratro Ianao (3x)",
+            "Tompo ô !"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 2,
+      "title": "ANDRIAMANITRA E MAHAGAGA!",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Andriamanitra ê! mahagaga",
+            "Ny zavatra nataon' ny tànanao",
+            "Ny kintana, ny kotrokoran' andro",
+            "Ampisehoanao ny herinao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Raha mitsangatsangana ao an' ala",
+            "Ka mahare ny feom-borona",
+            "Ny rivotra mitsoka moramora",
+            "Ary mahita tendrombohitra"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Raha tsaroako fa Jesoa Tompo",
+            "Natolotry ny Ray an-danitra",
+            "Ho avotra noho ny fahotako",
+            "'Zay vita tao Golgota avokoa"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Ho tonga indray Jesoa Tompo soa",
+            "Hitondra ahy ho any an-danitra",
+            "Hiondrika aho sy hitsaoka Azy",
+            "Andriamanitra ô! Fa lehibe"
+          ]
+        }
+      ],
+      "chorus": ["Midera Anao Andriamanitra ô!", "Fa lehibe, fa lehibe"]
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 3,
+      "title": "AOKA HISEHO NY VONINAHITRY NY RAY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Aoka hiseho ny voninahitry ny Ray (2x)",
+            "Aoka hiseho avy any an-danitra ny voninahiny",
+            "Aoka hiseho ny voninahitry ny Ray."
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Indrafon' ny Ray........",
+            "Fitiavan' ny Ray........",
+            "Fifalian' ny Ray........",
+            "Fahefan' ny Ray........",
+            "Fiadanan' ny Ray........",
+            "Fitsaboan' ny Ray........"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 4,
+      "title": "AOKA NY VOAVONJY HANAO HOE",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Aoka ny VOAVONJY hanao hoe (3x)",
+            "Voavonjy aho (2x)",
+            "Tompo ô ! (Faly. Voavela, Sitrana, Afaka)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 5,
+      "title": "ASANDRATRO NY TÀNAKO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ry Ray ô ! Asandratro ny tànako",
+            "Ray ô ! Ny foko sy ny feoko mitory ny voninahitrao",
+            "Ray ô ! deraiko lanao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": ["Ry Jesoa ô....", "Ry Fanahy ô...."]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 6,
+      "title": "DERAINA NY ANARANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "DERAINA ny anaranao",
+            "Andriamanitra mahery",
+            "Nanao izao rehetra izao",
+            "Tamin'ny fitiavana"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "DERAINA E! Ny anaranao",
+            "(HOBIANA, LAZAINA, TORIANA, AMBARA ....)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 7,
+      "title": "FA VELONA IZY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Fa velona Izy",
+            "Velona ny Tompo izao (2x)",
+            "Ny olona tsy ho faty intsony",
+            "Velona ny Tompo izao (2x)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 8,
+      "title": "HAJA HO AN'NY AVO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Haja, haja ho an'ny Avo",
+            "Hoby, hobio ny Tsitoha",
+            "Miderà ny Zanak'Ondry",
+            "Fa velona ny teniny",
+            "Derao ny Tompo"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 9,
+      "title": "HALELOIA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Haleloia",
+            "Jesoa Tompo",
+            "Indro avy izy",
+            "Mpanasitrana Izy",
+            "Mpamonjy ahy Izy"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 10,
+      "title": "HALELOIA HIDERA ANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Haleloia! Hidera anao ry Andriamanitra ô !",
+            "Fa mamy vokarin'ny ao am-po",
+            "Ny hira atolotro anao",
+            "Mendrika ny voninahitrao",
+            "Avo lolohavin'ny loha",
+            "Sy tsara isaloran'ny saina sy ny fo"
+          ]
+        }
+      ],
+      "chorus": [
+        "Deraiko avo",
+        "Dradraiko ho ren'izao tontolo izao",
+        "Fa tsara sy mendrika loatra",
+        "Ilay fiderako anao",
+        "Mamin'ny foko",
+        "Lalaiko ny mihira ho anao ry Tsitoha",
+        "Ry Andriamanitra tokana ao am-po"
+      ]
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 11,
+      "title": "HANANDRATRA ANAO AHO SALAMO 145.1-3",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hanandratra Anao aho",
+            "Ry Andriamanitro Mpanjaka ô!",
+            "Sy hankalaza ny anaranao",
+            "Mandrakizay doria"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Hankalaza Anao isan' andro aho",
+            "Sy hidera ny Anaranao",
+            "Sy hidera ny Anaranao",
+            "Mandrakizay doria (D.C.)"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Lehibe Jehovah, ka tokony hoderaina",
+            "Ary tsy takatry ny saina ny fahalehibiazany (D.S.)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 12,
+      "title": "HAZAVAN'ANDRIAMANITRA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hazavan' Andriamanitra",
+            "Re no HAMINDRANTSIKA (HIDERANTSIKA) Izao (2x)"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "MAMINDRA (Midera) isika",
+            "MAMINDRA (midera)",
+            "Amin' ny Hazavan' Andriamanitra (2x)"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Ny Herin'Andriamanitra",
+            "Re no HANDROSOANTSIKA (HITORIANTSIKA) izao (2x)"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "MANDROSO (MITORY) isika",
+            "MANDROSO (MITORY)",
+            "Amin' ny herin' Andriamanitra (2x)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 13,
+      "title": "HE AZOKO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "He azoko (2x) nomen'ny Tompo mamiko",
+            "akanjo fotsy lava masina,",
+            "akanjon-danitra he, he azoko",
+            "Amena (2x) akanjon'ny anjely masina, masina",
+            "Amena (2x) ho entiko ao an-danitra"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "He azoko (2x) ny satroboninahitra nomeny",
+            "satroboninahitr'aho.",
+            "satroboninahitra volamena (2x)",
+            "satroboninahitra fandresena (2x)"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "He azoko (2x) azoko ny hira tsara",
+            "hiran'ny anjely sy arkanjely",
+            "hiran'ireo tafita sy afak'ady"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 15,
+      "title": "HIRA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Amena (2x) hira mifamaly hoe mifalia (2x)",
+            "Amena (2x) ka hira vaovao no hiraiko"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "He azoko (2x) azoko ilay tanàna Jerosalema",
+            "tanàna masina ka voaomana hampakarina",
+            "Jerosalema tanàna honenako amin'ny Tompoko",
+            "Jerosalema honenako ho mandrakizay"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 14,
+      "title": "HIDERA AN'ANDRIAMANITRA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hidera an' Andriamanitra aho",
+            "Amin' ny foko rehetra",
+            "Hanambara ny fahatsarany",
+            "Hihira ny Anarany"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Hidera an' Andriamanitra aho",
+            "Amin' ny foko rehetra",
+            "Hanambara ny fitiavany",
+            "Haleoia"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 15,
+      "title": "HIRA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tiako ny mihira mankalaza anao",
+            "Ry Jesoa Mpamonjy sy Mpanjakanay",
+            "Hira fiderana no asandratray",
+            "Hira avy ao am-po hiraiko hiderana anao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Hira tsy mba hisy fitsaharana",
+            "Fa mbola hitohy hatrany any an-danitra",
+            "Hira mampiseho ny voninahitrao",
+            "Ka hanakoako sady hahafinaritra"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 16,
+      "title": "HISAOTRA AN'I JEHOVAH LALANDAVA AHO SALAMO 34",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hisoatra an'i Jehovah lalandava aho (2x)",
+            "Ho eo am-bavako mandrakariva ny fiderana",
+            "Ho eo am-bavako mandrakariva ny fiderana Azy"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Jehovah no reherahen'ny fanahiko",
+            "Hahare izany ny mpandefitra ka ho faly",
+            "Miaraha, miaraha, miaraha mankalaza (2x)",
+            "Miaraha mankalaza an'i Jehovah amiko",
+            "Ary aoka hiara-manandratra ny Anarany isika."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 17,
+      "title": "HISAOTRA NY TOMPO AHO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hisoatra ny Tompo aho",
+            "Hisoatra ny Ray masina",
+            "Satria nomeny ahy Jesoa Kristy (x 2)"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Anio ny osa hatanjahina",
+            "Ny mahantra hanankarena",
+            "Satria ny Tompo nanome",
+            "Ho anao Jesoa"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 18,
+      "title": "HITSANGANA AHO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hitsangana aho sitrana soa",
+            "Hifaly aho, tsy gadran' ota",
+            "Hiroso aho noho ny herin' ny Tompo",
+            "Tena voadio, voavela indray"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 19,
+      "title": "HODERAINA ANIE",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ho deraina anie ny anaranao",
+            "Ry Jehovah Ray be fitia",
+            "Noho ny fitiavanao (satria) novimbininao",
+            "Ny fiangonanay tratry Izao fotoana izao",
+            "Ka hisaorana lanao",
+            "Asandrato re ny feo fiderana",
+            "Redony koa, Halelofia, Halelofia",
+            "Amena, Halelofia, Halelofia",
+            "Ny fiangonanay omeo fo madio",
+            "Fahendrena avy aminao",
+            "Mba ho reherehanao (Tahio)",
+            "Ho mpanara-dia sy ho mpianatrao",
+            "Ka hitory ny teninao",
+            "Mba ho voninahitrao",
+            "Asandrato re ny feo fiderana",
+            "Venteso koa ny Halelofia, Halelofia",
+            "Amena, redony re Halelofia"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 20,
+      "title": "HOSANA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hosana, Hosana amin'ny Avo Indrindra (2x)",
+            "Asandratray izao, ny Anaranao",
+            "Mitsangàna Andriamanitra ô!",
+            "Hosana amin'ny Avo Indrindra"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Dera, Dera, Mpanjakan'ny Mpanjaka (2x)",
+            "Asandratray izao, Anaranao",
+            "Mitsangàna Andriamanitra ô!",
+            "Mpanjakan'ny Mpanjaka"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 21,
+      "title": "IMANOELY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Imanoely, Imanoely",
+            "Imanoely no Anarany",
+            "Amintsika, hita amintsika",
+            "Imanoely no Anarany"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 22,
+      "title": "INDRO EFA TAFATSANGANA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Indro efa tafatsangana",
+            "Ny Tompontsika O, mitrakà re ry tany",
+            "Venteso ny hiranao sy ny hoby",
+            "Hanakoako ho re",
+            "Fa tsy hisy intsony tomany (Satria efa)",
+            "Vita izao ny famonjena ka mifalia",
+            "Toro 'lay rafy nandoza",
+            "Voavaha izao ny gadram-paty ka mihobia",
+            "Kristy nivoaka ho mpandresy"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Jesoa 'zay nanolotr'aina hamonjy antsika",
+            "Hobio sy ankalazao amin'ny mozika",
+            "Satria naharesy ilay tena fahavalo",
+            "Ka tsy hisy intsony tomany (satria efa)",
+            "Vita izao ny famonjena ka mifalia",
+            "Toro 'lay rafy nandoza",
+            "Voavaha izao ny gadram-paty ka mihobia",
+            "Kristy nivoaka ho mpandresy"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Mihirà fihiram-baovao ho an'i Jehovah",
+            "Derao 'lay Tompo Tsitoha",
+            "Fa fitiavan-dehibe no nasehony sy natolony",
+            "Ka tsy hisy intsony tomany (satria efa)",
+            "Vita izao ny famonjena ka mifalia",
+            "Toro 'lay rafy nandoza",
+            "Voavaha izao ny gadram-paty ka mihobia",
+            "Kristy nivoaka ho mpandresy"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 23,
+      "title": "ISAORANAY ANIE",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Isaoranay anie, isaoranay anie",
+            "Isaoranay anie ny Tompo (D.C)",
+            "Haleloia, Haleloia",
+            "Isaoranay ny anaran'ny Tompo"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 24,
+      "title": "ISAORAKO ANIE I JEHOVAH",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Isaorako anie i Jehovah",
+            "Fa ity olona mahantra ity",
+            "No niantso azy ê !",
+            "Nohenoiny, notahiany",
+            "Tamin'ny hery rehetra â, â !"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Mihobia an'i Jehovah",
+            "Mihobia an'i Jehovah ianareo",
+            "Miendrika hataon'ny olo mahitsy ny fiderana"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Miderà an'i Jehovah ianareo (x2)",
+            "Mankalazà amin'ny fo ravoravo ianareo"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Mihirà an'i Jehovah ianareo",
+            "Hirao tsara amin'ny feo fifaliana ny feonareo",
+            "Isaorako i Jehovah",
+            "Ho eo am-bavako ny fiderana",
+            "Mandrakariva (mandrakizay x2)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 25,
+      "title": "ITY ANDRO ITY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ity andro ity (2x)",
+            "Dia nomen' ny Ray (2x)",
+            "Ka mifalia (2x)",
+            "Miravoravao (2x)",
+            "Ity andro ity dia nomen' ny Ray",
+            "Ka mifalia miravoravao",
+            "Ity andro ity dia nomen' ny Ray"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 26,
+      "title": "JEHOVAH O ! TIAKO NY TRANONAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Eo akaikin'ny alitaranao",
+            "Jehovah ô !",
+            "No mba tiako izao",
+            "Hitoetra eo anilanao",
+            "Hidera ny Anaranao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Hafaliana tsy manampahàroa",
+            "Fa tratr'izao andro anio izao tokoa",
+            "Notahian'ny Tompo Tsitoha",
+            "Velon'aina samy soa"
+          ]
+        }
+      ],
+      "chorus": ["Jehovah ô! tiako ny tranonao", "Dia ny trano itoeranao"]
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 27,
+      "title": "JESOA AMBONY INDRINDRA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Jesoa ambony indrindra",
+            "Mpamonjy anay.",
+            "Tompo sy Mpanjaka",
+            "Kristy Tompontsika",
+            "Tsy mahafoy, antsika re."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 28,
+      "title": "JESOA NO TENA VATO FEHIZORO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Rendraendra ve sa ifalian' ny maso koa",
+            "Sa endrika ho levona sa telana halazo koa",
+            "No hanorenako izany tena fiainako",
+            "Ianao Jesoa irery no tena Vato fehizoro"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Ka na orana hifafy",
+            "Na ny rivotra koa hifofo",
+            "Tsy mba hanan-tahotra aho",
+            "Tsy hangovitra (satria)",
+            "Vato mafy no tena mandam-piainako",
+            "Ianao Jesoa irery no tena Vato fehizoro",
+            "Eo aminao no tena irafetako",
+            "Hitombo tsara ho tempoly masina ao Aminao",
+            "Mba ho fonenanao sy ilay Fanahy Masinao",
+            "Ianao Jesoa irery no tena Vato fehizoro"
+          ]
+        }
+      ],
+      "chorus": [
+        "Ka na orana hifafy",
+        "Na ny rivotra koa hifofo",
+        "Tsy mba hanan-tahotra aho",
+        "Tsy hangovitra (satria)",
+        "Vato mafy no tena mandam-piainako",
+        "Ianao Jesoa irery no tena Vato fehizoro",
+        "Eo aminao no tena irafetako",
+        "Hitombo tsara ho tempoly masina ao Aminao",
+        "Mba ho fonenanao sy ilay Fanahy Masinao",
+        "Ianao Jesoa irery no tena Vato fehizoro"
+      ]
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 29,
+      "title": "JESOA NO TSY MIOVA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Jesoa no tsy miova omaly sy anio ary koa mandrakizay (2x)",
+            "Mandrakizay (Mandrakizay O) (2x)",
+            "Jesoa no tsy miova omaly sy anio ary koa mandrakizay."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 30,
+      "title": "JESOA NO VATOLAMPY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Jesoa no Vatolampy. Vatolampy",
+            "Jesoa no Vatolampin' ny fiainana",
+            "Tojo fitodiana ny fanahy",
+            "Jesoa no Vatolampiko"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Ambony Vato aho, Vatolampy",
+            "Ambony Vatolampy ny fiainana",
+            "Tojo fitodiana ny fanahy",
+            "Ambony Vatolampy aho"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 31,
+      "title": "KANTO LOATRA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Kanto loatra, kanto loatra",
+            "Kanto loatra lanao Jesoa",
+            "Ka nataonao kanto loatra",
+            "Ny fiainako",
+            "Voakaly, tsara voatra",
+            "Mampiaky saina fo",
+            "Fa nataonao kanto loatra",
+            "Ny fiainako."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 32,
+      "title": "KATSAHO ALOHA MATIO 6:33",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Katsaho aloha ny fanjakan'ny lanitra",
+            "Sy ny fahamarinany",
+            "Dia hanampy ho anareo",
+            "Izany rehetra izany",
+            "Hale loia (4)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 33,
+      "title": "KUM BAYA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Kum baya, Ray O Kum baya (D.C. 3x)",
+            "Ray o, Kum baya",
+            "Fanahy ô! ...",
+            "Jesoa ô!"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 34,
+      "title": "MAHEREZA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Toa misy zava-tsarotra",
+            "Miseho sy mahakivy ve",
+            "Zay mitoetra sy mihatra",
+            "Aminao ry velona ê!",
+            "Asa angamba fahakiviana",
+            "Noho ny adim-piainana",
+            "Ka eo ianao mangina",
+            "Ory, very saina re!"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Raha mbola velona eto an-tany",
+            "Ny fiainan-tsarotra eo ihany"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Fa raha banjininao ilay Jesoa",
+            "Dia ho maivana avokoa",
+            "Na fahoriana sesilany",
+            "Hainy ho vahana hatrany",
+            "Ka Izy dia milaza hoe",
+            "Mahereza aza kivy re"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Toa gaga ianao indraindray",
+            "Raha manatona ny Ray",
+            "Dia tena feno fitsapana",
+            "Izay tena sarotra vahana",
+            "Zany no fiainanao",
+            "Saika isan andro lava izao",
+            "Tebiteby ho tratra ve",
+            "Ilay tanjona iray lehibe"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 35,
+      "title": "MAMIKO IANAO TOMPO Ô",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mamiko indrindra Ianao ry Tompo ô!",
+            "Fa Ianao no fialofako",
+            "Novonjenao aho ka afaka tokoa",
+            "Tamin' ny fatorako"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Andriamanitra Mahery Ianao",
+            "Ka misaotra Anao 'zahay",
+            "Anao ny fiderana atolotray",
+            "Sy ny voninahitra"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Mamiko indrindra Ianao ry Tompo ô!",
+            "Fa Ianao no fialofako",
+            "Novahanao aho ka afaka tokoa",
+            "Tamin' ny Gadrako"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 36,
+      "title": "MENDRIKA IANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Endrey, mendrika Ianao Tompo sy Mpanjaka",
+            "Mendrika Ianao",
+            "Endrey, mendrika Ianao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": ["Tompo sy Mpanjaka", "Itsaohako", "Masina...", "Jesoa...."]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 37,
+      "title": "MIDERA ANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Misy zava-marobe",
+            "Toa mendrika hiderana Anao",
+            "Dia zava-tsoa sy lehibe",
+            "Fa fitiavana no nentinao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Ka midera Anao 'zahay",
+            "Faly, ravo ihany koa",
+            "Fa tena tianao ry Ray",
+            "Ka nomenao zava-tsoa",
+            "Midera Anao, midera Anao",
+            "Faly ka midera Anao",
+            "Misaotra sady mankatelina",
+            "Fa tianao ny olombelona"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Zava-tsoa sy saro-bidy",
+            "Dia mendrika hiderana Anao",
+            "Fa na ny asa na ny adidy",
+            "Dia Tena avy Aminao"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Ny Tena, saina, fo, fanahy",
+            "Dia fanomezan-tsarobidy",
+            "Ka mampientana fanahy",
+            "Fa fanomezana voafidy"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 38,
+      "title": "MIDERA AZY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Aoka tsy ho sasatra hiantso ny Anaran'i Jehovah",
+            "Aoka tsy ho menatra hitonona ny Anaran'i Jehovah",
+            "Aoka tsy hitsahatra ianao hidera an'i Jehovah",
+            "Fa tokim-pahasoavana mahery ho anao"
+          ]
+        }
+      ],
+      "chorus": [
+        "Derao ny Anarany",
+        "Hobio ny heriny",
+        "Hirao ankalazao",
+        "Ny voninahiny",
+        "Tório ny teniny",
+        "Araho ny didiny",
+        "Hajao ny hasiny",
+        "Mandrakizay."
+      ]
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 39,
+      "title": "MIFALIA AO AMIN'NY TOMPO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mifalia ao amin' ny Tompo",
+            "Hoy izaho, indray mifalia (2x)",
+            "'Falia, 'Falia",
+            "Hoy izaho indray mifalia (2x)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 40,
+      "title": "MIHIRA FIHIRAM-BAOVAO SALAMO 149",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Haleloia (4x)",
+            "Mihira fihiram-baovao ho an' i Jehovah.",
+            "Ny fiderana Azy eo amin'ny olona masina (D.C.)"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Aoka ny Isiraely hifaly amin' ny Mpanao azy",
+            "Aoka ho finaritra amin' ny Mpanjakany ny zanak'i Ziona"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Aoka hidera ny anarany amin'ny dihy izy",
+            "Sy hankalaza Azy amin' ny ampongatapaka sy ny lokanga"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 41,
+      "title": "MIHOBIA HO AN'I JEHOVAH (SALAMO 100)",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mihobia ho an'i Jehovah",
+            "Ry tany rehetra",
+            "Manompoa Azy (2)",
+            "Ry tany rehetra",
+            "Mihobia an'i Jehovah",
+            "Mankanesa ê ! (2)",
+            "Eo anatrehany",
+            "Mihobia, Midira (2)",
+            "Ny vavahadiny",
+            "Izy no nanao antsika",
+            "Ary azy isika",
+            "Dia olony sy ondry fiandriny",
+            "Fa tsara Jehovah",
+            "Ary mandrakizay ny famindrampony"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 42,
+      "title": "MISAORA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Misaora amin' ny fo madio",
+            "Misaora Ilay Masina",
+            "Misaora satria nomeny",
+            "Jesoa Kristy Zanany (2x)"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Nahazo hery ireo malemy",
+            "Ny mahantra nanam-be",
+            "Noho ny asanao ry Tompo",
+            "Ho anay (2x) (D.S.)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 43,
+      "title": "MISAORA AN' I JEHOVAH RY FANAHIKO SALAMO 103, 1-4,22",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Misaora an' i Jehovah ry fanahiko",
+            "Ary izay rehetra ato anatiko",
+            "Misaora ny Anarany masina (D.C.)",
+            "Mpanjaka, (Mpanjakan' ny mpanjaka)",
+            "Sy Tompo, (Sy Tompon'ny tompo)",
+            "Mpanjaka, (Mpanjakan' ny mpanjaka)",
+            "Sy Tompo Izy."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 44,
+      "title": "MISAOTRA ANAO 'ZAHAY RY RAY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Misaotra Anao 'zahay ry Ray noho ny fitiavanao",
+            "Ny aizin-kitroka nisy ahy indro fa nidiranao",
+            "He hazavana lehibe no indro fa naposakao",
+            "Ka ravoravo ery ny fo izay midera Anao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Na dia tsy mendrika ry Ray ireto te-hidera Anao",
+            "Dia notoloranao anay ny fanavotan-dehibe",
+            "Na dia mahantra aza re dia novidian'ny Zanakao",
+            "Tamin'ny rany izay madio",
+            "Mba ho isan'ny anao"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "He menatra tokoa ry Ray",
+            "Hifanatrika Aminao",
+            "Kanefa noho ny zanakao",
+            "Indro fa manatona aho"
+          ]
+        }
+      ],
+      "chorus": [
+        "Inona ary no havaliko Anao",
+        "Noho ireo soa efa narotsakao",
+        "He hazavana lehibe no indro fa naposakao",
+        "Ka ravoravo ery ny fo izay midera Anao"
+      ]
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 45,
+      "title": "MISAOTRA JESOA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Misaotra Jesoa (2x), Misaotra Tompo ny fitiavanao (D.C.)",
+            "Maty ho anay lanao tany Kalvary, Misaotra Tompo ny fitiavanao (D.C.)",
+            "Velona Ianao, Manome fo vaovao, Misaotra Tompo ny fitiavanao (D.C.)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 46,
+      "title": "MISY HERY VAOVAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Te-ho afaka ota va ianao ?",
+            "Misy hery ao amin'ny Ra, ao amin'ny Ra",
+            "Sitrakao va ny ho Ievonin'ota?",
+            "Mahagaga ny herin'ny Ra."
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Te-handositra amin' ny rehaka?",
+            "Misy hery ao amin' ny Ra, ao amin' ny Ra",
+            "O! avia re fa ho afaka!",
+            "Mahagaga ny herin' ny Ra."
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Te-ho fotsy ka hanjopiaka va ianao?",
+            "Misy hery ao amin' ny Ra, ao amin' ny Ra",
+            "Ranovelona hanadio ny otanao,",
+            "Mahagaga ny herin' ny Ra."
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Maminao va hanompo Ilay Mpanjakanao?",
+            "Misy hery ao amin' ny Ra, ao amin' ny Ra",
+            "Hihira fiderana mahafinaritra ianao",
+            "Mahagaga ny herin' ny Ra."
+          ]
+        }
+      ],
+      "chorus": [
+        "Misy hery, hery vaovao",
+        "Amin' ny Ran' ny Zanak' ondry,",
+        "Eny, ampy hanadio anao",
+        "Dia 'lay Ra sarobidy."
+      ]
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 47,
+      "title": "MITSANGÀNA KA MIHIRÀ IZAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mitsangana ka mihirà izao ry Zanak'i Ziona ô!",
+            "Mitsangana ka mihirà izao fa ny Tompo nanavotra anao",
+            "Sokafy eo Aminy ny fonareo",
+            "Sokafy eo Aminy ny fonareo",
+            "Ka mifalia eo anoloany",
+            "Fa Andriamanitra Izy."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 48,
+      "title": "NOHO NY RATRANÃO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Sitrana aho noho ny ratra taminao",
+            "Araka ny teninao",
+            "Haleloia",
+            "Ny lakroan' i Kalvary no nizakanao 'zany ho ahy",
+            "Noho izany, afaka aho: Haleloia"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 49,
+      "title": "O ENDRE",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "O endre (O endre), fatratra (fatratra) (2x)",
+            "O endre Jesoa tia",
+            "O fiadanana, mpanome fiadanana"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "O endre (o endre) mahagaga (mahagaga) (2x)",
+            "O endre, Ray Tsitoha",
+            "O mpanolo-tsaina Ray Tsitoha"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "O Ry Tompo (O Ry Tompo), fatratra (fatratra) (2x)",
+            "O Ry Tompo, Tompoko",
+            "O fiadanako, mpanome fiadanana"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "O Ry Ray (O ry Tompo) mahagaga (mahagaga) (2x)",
+            "O ry Ray, fiainako",
+            "O Ray Tsitoha, Ianao, Ianao, O Ianao tokoa"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 50,
+      "title": "O ENDRE FATRATRA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "O Endre fatratra, fatratra, fatratra",
+            "O Endre fatratra Jesoa tia",
+            "Hita maso, sady re",
+            "Voatahirin' ny Baiboly",
+            "O Endre, fatratra Jesoa tia"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 51,
+      "title": "OMEO VONINAHITRA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hajao. Haja ho an' ny Avo (x2)",
+            "Hobio. Hobio ny Tsitoha",
+            "Miderà ny Zanak' Ondry",
+            "Fa velona ny Teniny",
+            "Derao ny Tompo"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Voninahitra (derao)",
+            "Hobio (derao)",
+            "Hajao",
+            "Derao ny Tompo",
+            "Omeo voninahitra"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 52,
+      "title": "O TIAKO IANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "O Tiako lanao ka asandratro",
+            "Ny feoko hidera Anao Tompo",
+            "Mba raiso re ry Mpanjakako",
+            "Ho hanitra ankasitrahana ho Anao"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 53,
+      "title": "RAINAY O",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Rainay ô! Ny dera ho anao",
+            "Fa nomenao ho anay ny Zanakao",
+            "Rainay ô! Be fitiavana",
+            "Anao irery mandrakizay ny deranay",
+            "He hobio. derao anio.",
+            "'Lay Tompo soa"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 54,
+      "title": "RAY O, IZAY TIANAY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ray ô, izay tianay",
+            "Derainay sy itsaohanay",
+            "Ankalazainay eran-tany",
+            "Ankalazainay, ankalazainay",
+            "Ankalazainay ny Anaranao"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 55,
+      "title": "RAY Ô MAMIKO IANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ray ô. Mamiko Ianao",
+            "Omeko anao ny fiainako",
+            "O tiako Ianao",
+            "Jesoa ô......",
+            "Fanahy ô ....."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 56,
+      "title": "REHEFA MISAINA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Rehefa misaina ny fitiavan'i Jesoa aho",
+            "Sy izay rehetra nataony tamiko",
+            "Te-hiantso mafy aho hoe Halelofia",
+            "Hisaorako Azy ny fitiavany",
+            "fiadanany....famonjeny",
+            "fahasoavany....hatsarany"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 57,
+      "title": "SAROBIDY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Sarobidy noho ny volafotsy",
+            "Lafo vidy noho ny volamena",
+            "Tsara bika noho ny diamondra",
+            "Tsy misy iriko toa Anao, Tompo ô!"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 58,
+      "title": "TENA LEHIBE NY FITIAVAN'I JESOA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tena lehibe ny fitiavan' i Jesoa (2x)",
+            "Tena maha-te ho tia.",
+            "Avo indrindra tsy azo ihoarana",
+            "Iva indrindra tsy azo ambaniana",
+            "Be velarana tsy azo ihodinana",
+            "Tena maha-te ho tia"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 59,
+      "title": "TIAKO NY TRANO ITOERANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tiako indrindra ny fonenanao",
+            "Jehovah Ray Tsitoha",
+            "Hanadiovanao ny olonao",
+            "Ho mendrika anao tokoa."
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Tiak'indrindra ny fonenanao",
+            "Jehovah Ray Tsitoha",
+            "Hiderana ny anaranao",
+            "Sy ho fiadanam-po"
+          ]
+        }
+      ],
+      "chorus": [
+        "Tiako,tiako ny trano itoeranao",
+        "Ny fonenan'ny voninahitrao",
+        "Sy hanandratanay ny hajanao",
+        "Ry Andriamanitray"
+      ]
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 60,
+      "title": "TOMPO O NY FITIAVANAO APARIAHO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tompo ô! ny fitiavanao apiariaho",
+            "Afovoan'ny aizana, apiariaho",
+            "Jesoa hazavao izahay",
+            "Mba afaho amin'ny fahazavanao",
+            "Mamirata, mamirata",
+            "Mamirata"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 61,
+      "title": "TOMPO O IZAY NANAO NY LANITRA SY NY TANY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tompo ô, 'Zay nanao ny lanitra sy ny tany tamin-keri lehibe",
+            "Tompo ô, 'Zay nanao ny lanitra sy ny tany tamin'ny sandrinao",
+            "Tsy misy, zava-tsarotra aminao (2x)",
+            "Lehibe, mahery, hendry sy mahery indrindra",
+            "Tsy misy, tsy misy, eny tsy misy tokoa",
+            "Tsy misy zava-tsarotra aminao"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 62,
+      "title": "TSARA AMIKO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tsara Amiko",
+            "Ny Tompo re",
+            "Ny Tompo re",
+            "Tsara amiko",
+            "Haleioia (3x)",
+            "Tsara amiko"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Que Dieu est bon (3x)",
+            "Dieu est bon pour moi",
+            "Alleluia, Alleluia, Alleluia",
+            "Dieu est bon pour moi"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Yes, God is good (3x)",
+            "God is good to me",
+            "Alleluia, Alleluia, Alleluia",
+            "God is good to me"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 63,
+      "title": "TSY HANGINA MIHITSY AHO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tsy hangina mihitsy aho",
+            "Tsy hangina aho ê!",
+            "Hiantso ny Anaranao aho Jesoa Tompo ô!",
+            "Ianao ihany no ampingako",
+            "Tsy hangina mihitsy aho",
+            "Tsy hangina aho ê!"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Fony aho mbola zaza",
+            "Niantso ny Anaranao ê!",
+            "Na dia antitra aza aho",
+            "Mbola hidera Anao",
+            "Ianao ihany no ampingako",
+            "Tsy hangina mihitsy aho",
+            "Tsy hangina aho ê!"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 64,
+      "title": "TSY HO ELA INTSONY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tsy ho ela intsony",
+            "Dia ho avy indray Jesoa (3x)",
+            "Haleoia, Haleoia,",
+            "Ho avy indray Jesoa."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FIDERANA, FISAORANA SY FITSAOHANA",
+      "id": 65,
+      "title": "ZANAK'ONDRY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Zanak' ondry ô! (2x)",
+            "Mendrika lanao (2x)",
+            "Jesoa Zanak' ondry (4x)",
+            "Zanak' ondry (2x)",
+            "Masina lanao (2x)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 66,
+      "title": "ABA RAY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Aba Ray, aoka aho re",
+            "Mba ho anao doria",
+            "Ka ny sitrapoko ê",
+            "Anao mandrakizay"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Aza avela re ny foko",
+            "Hanalavitra Anao",
+            "Aba Ray, aoka aho re",
+            "Ho Anao hatrany"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Jesoa Kristy aoka aho re",
+            "Mba ho anao doria",
+            "Ka ny fitiavako",
+            "Anao mandrakizay"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Aza avela re ny foko",
+            "Hanalavitra Anao",
+            "Ka ny fitiavako",
+            "Ho Anao hatrany"
+          ]
+        },
+        {
+          "verse_number": 5,
+          "lines": [
+            "Fanahy Masina aoka aho re",
+            "Mba ho anao doria",
+            "'Zao fiainako izao",
+            "Anao mandrakizay"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 67,
+      "title": "ANDRIAMANITRA O! AROVY AHO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Andriamanitra ô! Arovy aho fa mialoka Aminao",
+            "Hoy izaho amin'i Jehovah: Tompoko Ianao, ry Ray"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Ho be ny fahorian'izay manova an'Andriamanitra",
+            "Ka hatakalony"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Jehovah no anjara lovako, kapoakako",
+            "Mampaharitra ny anjarako"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Hisaotra ny Tompo aho izay manome saina ahy, hialoka Aminy",
+            "Misaotra Anao ry Ray"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 68,
+      "title": "AVIA FANAHY O!",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Avia Fanahy ô, (Henoy 'zahay) (x2)",
+            "Avia Fanahy ô, (Mitalaho Aminao)",
+            "Avia Fanahy ô, (Henoy 'zahay)",
+            "Henoy 'zahay, Mitalaho Aminao",
+            "Omeo anay (Fiangonanao)",
+            "Ny Fanomezanao (Ankalazao ny Tompo)",
+            "Ny fahamarinanao (Hazavao ny lalanay)",
+            "Ny fitarihanao"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 69,
+      "title": "FIANGONANA MAMINAY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ry Ray 'zay nahary ny voary",
+            "Isaorana ny anaranao",
+            "Fa kanto ary koa lavorary",
+            "Ny lova 'zay natolotrao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Ry Jesoa Mpanavotra anay ô !",
+            "Omeo ny fiadananao",
+            "Ho mpino mahay mifandray",
+            "No tanjonay hatramizao"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Fanahy ô ! avia mba tsilovy",
+            "Tantano ny Fiangonana",
+            "Avaozy ary koa mba arovy",
+            "Meteza hiasa aminay"
+          ]
+        }
+      ],
+      "chorus": [
+        "Fiangonana tsy hohadinoina",
+        "nahazoana ny soa sy ny tsara",
+        "Tadidy sy tsaroana",
+        "'reo anatra maro nambara",
+        "Ka tiako ianao ry Fiangonana maminay ô !"
+      ]
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 70,
+      "title": "FITIAVAN-DEHIBE",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Fitiavan-dehibe ho ahy",
+            "Toy ny ranomasina",
+            "Raha mamonjy ahy ilay Mpanjaka",
+            "Raha nalatsany ny rany"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Jesoa Tompo ho anao",
+            "Ny fitiavako izao",
+            "Izay tsy namely ahy",
+            "Hisy handrombaka indray"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Toy ny loharano ho ahy",
+            "Lalina tsy mety ritra",
+            "Famindrampo ry Tompo",
+            "Herin'izao tontolo izao"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Fitiavana ianao",
+            "Ry Jesoa Mpanjakako",
+            "Fiadanako hoy ianao",
+            "No omeko anareo (x2)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 71,
+      "title": "HANOMPO ANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hanompo anao aho manomboka anio",
+            "Ry Jesoa malalako",
+            "Sy hankalaza ny anaranao",
+            "Mandrakizay doria",
+            "Ny hetahetako anie ry Jesoa",
+            "Dia ny hanompo Anao",
+            "Manomboka anio sy mandrakizay",
+            "Hanompo Anao ry Jesoa"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Raha sendra variana",
+            "Ny fiainana an-tany aho",
+            "Ry Jesoa malalako",
+            "Dia tantano ary koa vimbino",
+            "Ento hanaraka Anao",
+            "Ny faniriako anie ry Jesoa",
+            "Dia ny hanompo Anao",
+            "Hatreto an-tany ka hatrany an-danitra",
+            "Dia ho Anao ry Jesoa"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Maro dia maro ny fakam-panahy",
+            "Izay mamely etý",
+            "Mila ho solafaka anie izany dia",
+            "Raha sendra ka lavitra Anao",
+            "Ampaherezo aho ry Tompo malala",
+            "Hazoto hanompo Anao",
+            "Na mora na sarotra anie izany dia",
+            "Tantano aho hanaraka Anao"
+          ]
+        }
+      ],
+      "chorus": [
+        "Hidera sy hanompo Anao Jesoa aho",
+        "Hanandratra ny anaranao mandrakizay doria",
+        "Ny hetahetako anie ry Jesoa",
+        "Dia ny hanompo Anao",
+        "Izay no faniriako",
+        "Sy fikasako ry Tompo malalako"
+      ]
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 72,
+      "title": "HO KRISTIANA NO IRIKO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ho kristiana no iriko",
+            "Ato am-poko (2x)",
+            "Ny ho tia tokoa no iriko",
+            "Ny ho toa an'i Kristy no iriko",
+            "Ny ho naman'i Kristy no iriko"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 73,
+      "title": "JESOA TOMPO O VONJEO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Jesoa Tompo ô vonjeo ka tahio",
+            "Ny fanahin'ny mpanomponao",
+            "Aza avelanao ho very ity ondrinao",
+            "Fa mania be siasia",
+            "Ventesinay ny hira fiderana Anao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Mba hitari-dàlana anay",
+            "Derainay ilay Mpanjaka Ichibe",
+            "Fa mpandresy an'i Satana"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Kristiana ô jereo ny fiangonanao",
+            "Fa ianao no heriny",
+            "Mahereza re aza kivy koa",
+            "Atolory ny fanahinao"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 74,
+      "title": "MANANJARA AVOKOA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mananjara avokoa ry Jesoa be fitia",
+            "Ny mpanota navotanao",
+            "Ravoravo tokoa izahay mania.",
+            "Fa hitoetra eo anilanao."
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Raiso aho Tompo ô. mitoera ao izao",
+            "Ka hanjaka o ny foko ho anao",
+            "Hazavao ka sasao.",
+            "Fa vohako ho anao",
+            "Manjakà lanao Jesoa ô!"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Mba iriko Jesoa. ny handova ny Ray",
+            "Ka hiara-manjaka Aminao",
+            "Hasambarana be sady mandrakizay",
+            "Ao an-tany soa sy vaovao"
+          ]
+        }
+      ],
+      "chorus": [
+        "Fahavalo tokoa. olom-bery nifaly",
+        "Nefa kosa nomena indrafo",
+        "Raiso re Raiko ô, ny fifonako izao",
+        "Mitoera ao am-poko ianao izão"
+      ]
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 75,
+      "title": "MITOMOERA IZAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mitomoera izao",
+            "Ry Fanahy Masina",
+            "Diovy ary hazavao ny fonay",
+            "Mila fahasoavana",
+            "Aoka hitoetra lalandava",
+            "Ho doria mandrakizay",
+            "Tsy handao tsy ho rava",
+            "Ho lovasoa tsy miova",
+            "Harena anatinay"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Mitomoera izao",
+            "Ry fahasoavana ô !",
+            "Raiso ary hatanjaho",
+            "Ny sainay ketraky ny aizina",
+            "Mba tariho hankato",
+            "Ilay sitrapon'ny Ray",
+            "Ho aim-panahy hampiova fo",
+            "Hanjaka, haharitra",
+            "Doria mandrakizay"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 76,
+      "title": "OMEO FO MINO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ray ô tariho",
+            "Sy hamasino",
+            "Mba sakambino",
+            "'Zahay zanakao",
+            "Hianao ry Rainay",
+            "No antenainay",
+            "Hambomba anay",
+            "Omeo fo mino",
+            "Tsy hanadino",
+            "Anao ry Rainay",
+            "Ho mandrakizay"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Jesoa ô Mpamonjy",
+            "Ry Mofon'aina",
+            "O mba vokiso",
+            "Ny fanahinay",
+            "Fa manantena",
+            "Ny famonjena",
+            "Hatolotray",
+            "Omeo fo mino",
+            "Tsy hanadino",
+            "Anao Mpamonjy",
+            "Ho mandrakizay"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "O ry Fanahy",
+            "Fanahin'ny Ray",
+            "Bitsibitsiho",
+            "Ny fanahinay",
+            "O'mba tsilovy",
+            "Dia mba arovy",
+            "'Zao ny lâlanay",
+            "Omeo fo mino",
+            "Tsy hanadino",
+            "Anao Fanahy",
+            "Ho mandrakizay"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "FANOLORAN-TENA SY FANGATAHANA",
+      "id": 77,
+      "title": "RAINAY OI",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": ["Rainay ô, ô Ndreto ny olonao", "Miomana. Hiaraka aminao"]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Diovy ny sainay",
+            "Avelao ny helokay",
+            "Hazavao ny làlanay",
+            "Hiarahana aminao"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Na inona hidona",
+            "Na inona hihatra",
+            "Jesoa irery no tompoinay"
+          ]
+        }
+      ],
+      "chorus": [
+        "Tantano olonao fa jamba",
+        "Aza ilaozanao tsy ho very",
+        "Tsy hiverin-dàlana â ! â !",
+        "Hanaraka Anao"
+      ]
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 78,
+      "title": "DIDY VAOVAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Didy vaovao no atolotro anareo",
+            "Ho marika fa hoe: mpianatra ianareo",
+            "Didy mahasoa mampihavana",
+            "Maivana sy mora koa, io no ziogako"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Mba ianaro, mba iaino",
+            "Raiso ho fiainana",
+            "Io no lova sy harena navelan'ny Tomponao",
+            "La! La! La!"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Jesoa Tomponao, io fitiavana io",
+            "Ka mba raiso izao, hitoetra ao Aminao",
+            "Enta-tsy mavesatra, fa mila fiezahana",
+            "Fanahy tsotra sy madio, no fehin'io fitiavana io"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 79,
+      "title": "FIRAISANA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tamin'ny fo no tena ninoanay",
+            "Fa Jesoa no tonga hamonjy anay",
+            "Tamin'ny vava no tena nanekenay",
+            "Fa ny rany no nanadio anay"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Tsy iray finoana f'iray ao aminao",
+            "Tsy iray fiaviana f'iray an-dapanao",
+            "Tsy iray fiteny fa samy henoinao",
+            "Tsy iray fihodirana fa samy zanakao"
+          ]
+        }
+      ],
+      "chorus": [
+        "Vavaky ny Tompo mba ho iray",
+        "Fanahy izay nomeny mampiray",
+        "Fanahy fitiavana koa ny Ray",
+        "Nahoana lahy raha mifankatia",
+        "Mifankatiava hoy ny Tompo",
+        "F'izany no hamantaran'",
+        "Ny olona rehetra",
+        "Fa mpianatro ianareo"
+      ]
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 80,
+      "title": "HANDEHA MARO BE RY KRISTIANA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Handeha maro be ry kristiana",
+            "Hanaraka izao ny dian'i Kristy!",
+            "Tsy hisy ho kivy fo, tsy hisy hivadika",
+            "Tsy hisy handositra ny fahavalo"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Raha misy maminany loza sy ratra",
+            "Mamita-tena izy. Sahy isika,",
+            "Kristy miaro antsika: ny heriny tsitoha",
+            "No itafiantsika miaramila"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Raha misy manjo antsika ety an-tany",
+            "Banjinintsika anie ny lanitra any!",
+            "Tsy atahorana ny herin'ny devoly",
+            "Ho lovantsika re ny fanjakana."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 81,
+      "title": "HO VAVOLOMBELOKO IANAREO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ho vavolombeloko Ianareo",
+            "Ho vavolombeloko",
+            "Hatrany am-paran' ny tany",
+            "Vahoaka tiako ianareo",
+            "Tiako tokoa",
+            "Hendry sy mora fo"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Zanako ianareo",
+            "Naterako",
+            "Nateraky ny lanitra",
+            "Aoka ho mendrika ianareo",
+            "Sy masina",
+            "Hamantarany ny Tompo"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Mpisorona ianareo",
+            "Sy mpaminaniny",
+            "Hanambara ny fanjakany"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 82,
+      "title": "IANAREO NO FANASIN'NY TANY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Misy feo miantso hoe:",
+            "Raiso ny andraikitrao",
+            "Mivavaha ka miasa",
+            "Manompoa ny Eklesia"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Vonona tokoa 'zahay",
+            "Fikambanan-dehilahy",
+            "Hanome ny herinay",
+            "Zotom-po sy aim-panahy"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Jesoa Kristy Tompo ô!",
+            "Ianao Filohanay",
+            "Ka ny asanay anie",
+            "Mba ho voninahitrao"
+          ]
+        }
+      ],
+      "chorus": [
+        "Fo matoky no indro",
+        "Itsenany ny antso",
+        "HO FANASIN'NY TANY",
+        "'Zay no tarigetranay"
+      ]
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 83,
+      "title": "IZAHO NO ANDRIAMANITRA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Izaho no Andriamanitra izay manasitrana anao",
+            "Nirahiko ny teniko mba hanasitrana anao",
+            "Ianao no Andriamanitra izay manasitrana ahy re",
+            "Nirahinao ny Teninao mba hanasitrana ahy re"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 84,
+      "title": "MANATONA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "He hianareo mavesatra entana",
+            "Manatona hoy Jesoa",
+            "Izay mahatsiaro fa tena miasa fatratra",
+            "Dia hahazo fitsaharana"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Tsarovy anefa fa",
+            "Tsy fihatsarambelatsihy",
+            "Ny hanatonanao an'i Kristy",
+            "Fa izay hita fa manao ny marina, marina",
+            "Dia hahazo fitsaharana"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "He ianareo izay ory fo",
+            "Manatona hoy Jesoa",
+            "Aza misalasala fa omeo Azy ny fo",
+            "Ho hitanao ny fiadanam-po"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 85,
+      "title": "MANDROSOA RY MINO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mandrosoa ry mino",
+            "Mahereza izao",
+            "Ny Lakroa banjino",
+            "Ho Fanevanao",
+            "Kristy Kapiteny",
+            "Miantso anao tokoa",
+            "Mba hitoriteny",
+            "Hampielly soa"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Misy vatolampy",
+            "Hovakiana",
+            "Ny mpanompo sampy",
+            "Hitoriana",
+            "Ny mpisalasala",
+            "Taomy hiara-dia",
+            "Ampodio am-bala",
+            "'Reo 'zay nania"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "'Zay anaty tsilo",
+            "Azon'ny manjo",
+            "Mila anao hitsilo",
+            "Hampifaly koa",
+            "Ny marivo saina",
+            "Sy finoana",
+            "Omeo ranon'aina",
+            "Hisotroana"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Vitsy ny mpamafy",
+            "Feno zotom-po",
+            "Miaritra ny mafy",
+            "Sy mikiry koa",
+            "Fa ny hafanana",
+            "Rivo-doza be",
+            "Samy fitsapana",
+            "Moa ho kivy ve?"
+          ]
+        },
+        {
+          "verse_number": 5,
+          "lines": [
+            "Tsy ho ela akory",
+            "Fararano soa",
+            "Mpiasa sy mpitory",
+            "Hioty voka-tsoa",
+            "Ka ho faly, ravo",
+            "Miramirana",
+            "Fa ny lanitra avo",
+            "No hidirana"
+          ]
+        },
+        {
+          "verse_number": 6,
+          "lines": [
+            "Tsy hiady intsony",
+            "Ny nahefa be",
+            "Paradisa ambony",
+            "Fitsaharana ê !",
+            "Mino afa-jaly",
+            "Dia nasandratra",
+            "Ka hiara-paly",
+            "Sy ho sambatra !"
+          ]
+        }
+      ],
+      "chorus": [
+        "Aza mba malaina",
+        "Mamafaza voa",
+        "Amin'ny maraina",
+        "Sy hariva koa"
+      ]
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 86,
+      "title": "MANKANESA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mankanesa aty amiko hianareo",
+            "Izay miasa fatratra mavesatra entana",
+            "Fa Izaho no hanome anareo",
+            "Ny fitsaharana sy fiadanana"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Izany ê, Izany re no hatolotr'i Jesoa",
+            "Raha manatona Azy ianao",
+            "Izany ê, Izany re no hatolotr'i Jesoa",
+            "Raha manaiky Azy ianao"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Izaho no mpiandry ondry tsara",
+            "Izay mitandrina ny ondriko",
+            "Tsy mba hanenina na ho diso anjara",
+            "Izay mametraka ny fiainany Amiko"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 87,
+      "title": "MATY ILAY JESOA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Maty ilay Jesoa (x3)",
+            "Nohomboana i Jesoa",
+            "Amy hazo fijaliana",
+            "Kinapoke finantsike"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Velona i Jesoa",
+            "Tamy nitsanganan'i Jesoa tamin'ny maty",
+            "No nanirahan'ireo mpianany"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Mandehana ianareo amin'izao tontolo izao",
+            "Lazao ireo lazai ko ireo"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 88,
+      "title": "MITORIA (HIRA FANEVA 10 TAONA FITORIANA)",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mbola maro sesehena",
+            "Ireo tsy mahalala akory",
+            "Ny tombotsoan'ny famonjena",
+            "Ka miandry anao hitory",
+            "Malakia sao diso aoriana",
+            "Ento anio dia anio ny teny",
+            "Ambarao am-pahasahiana",
+            "Ny amin'ny Tompo mba ho reny"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Ndeha Satana afatory",
+            "Andeha poteho tsy hanan-kery",
+            "Koa mandehana ry mpitory",
+            "Aza avela hisy ho very",
+            "Ireo fanahy an'alin-kisa",
+            "Tian'i Jesoa hovoriana",
+            "Ento ho any am-paradisa",
+            "Lozantsika raha hangina"
+          ]
+        }
+      ],
+      "chorus": [
+        "Atosahy ny herinao",
+        "O, ry Tompo be fitia",
+        "Mamirata Ianao",
+        "Hazavao ity tany ity"
+      ]
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 89,
+      "title": "MITSANGANA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mitsangàna ianao ka mitoria",
+            "Miandry anao izao tontolo izao",
+            "Mivonòna ary matokia",
+            "Fa ny Tomponao no tsy mandao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Mazotoa ka aza mba malaina",
+            "Fa marobe ireo manantena anao",
+            "Ka hatanjaho mafy re ny saina",
+            "Fa ny Tomponao no tsy mandao"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Mbola misy tany maizina",
+            "Miandry anao hamirapiratra ao",
+            "Mivonòna ary matokia",
+            "Fa ny Tomponao tsy mandao"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 90,
+      "title": "OMEO AN'I JESOA NY ENTANAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": ["Omeo an'i Jesoa ny entanao", "Fa Izy no miahy anao (D.C.)"]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 91,
+      "title": "RAHA NY OLOKO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Raha ny oloko",
+            "Natsoina tamin'ny anarako",
+            "No ho avy hanetry tena, ka hivavaka",
+            "Sy hitady ny tavako",
+            "Ary hiala amin'ny ratsy fanaony",
+            "Dia hihaino any an-danitra aho"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Dia indro hamela ny helony",
+            "Ary hanasitrana (2) ny taniny",
+            "Hanasitrana ny taniny aho",
+            "Hihaino any an-danitra aho",
+            "Sy hamela ny helony ary",
+            "Hanasitrana aho, ny taniny aho"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "ANTSO SY BAIKON'NY TOMPO",
+      "id": 92,
+      "title": "RAHA TSINJONAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Raha tsinjonao ny tao anatiko tao",
+            "'Lay tena fahambanian'ny toetrako",
+            "Angamba hanontany tena ianao hoe",
+            "Nahoana no tia ahy Jesoa (2x)"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Kanefa dia zavatra iray loha",
+            "No hany haiko ka indro ambarako",
+            "Nomen'ny Tompo ahy hatramin'izao",
+            "'Lay tena fiainam-baovao. (2x)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 93,
+      "title": "ANDRIAMANITRO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Andriamanitro lehibe sy mahery",
+            "Tsy misy tsy hainy atao (2x)",
+            "Ny tendrombohitra, ny ranomasina",
+            "Ny lanitra Azy avokoa.",
+            "Andriamanitro lehibe sy mahery",
+            "Tsy misy tsy hainy atao."
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 94,
+      "title": "AN'I JEHOVAH IREO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ny loha, ny lohalika, ny soroka, ny tongotra",
+            "Ny loha, ny lohalika, ny soroka, ny tongotra",
+            "An'i Jehovah ireo"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Ny maso, ny orona, ny sofina, ny vava",
+            "Ny maso, ny orona, ny sofina, ny vava",
+            "An'i Jehovah ireo"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 95,
+      "title": "ATO AM-POKO SALAMO 119:11",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ato am-poko no iraketako ny teninao",
+            "Mba tsy hanotako",
+            "Mba tsy hanotako, mba tsy hanotako aminao"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 96,
+      "title": "AZA MATAHOTRA IANAO ISAIA 41:10",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Aza matahotra ianao fa momba anao Aho",
+            "Ary aza miherikerika foana",
+            "Fa 'Zaho no Andriamanitrao",
+            "Mampahery anao Aho sady mamonjy",
+            "Eny mitantana anao amin'ny tànan-kavanan'ny fahamarinako Aho"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 97,
+      "title": "HANOME SAINA SALAMO 32:8",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hanome saina anao (x3)",
+            "Sy hampianatra izay lalan-kalehanao Aho",
+            "Hitsinjo anao ny masoko (x2)",
+            "Ka hanolo-tsaina anao",
+            "Hanolo-tsaina anao Aho"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Hanome saina anao",
+            "Sy hampianatra anao",
+            "Izay lalan-kaleha",
+            "Alehanao aho"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Hitsinjo anao ny masoko",
+            "Ka hanolo-tsaina",
+            "Ka hanolo-tsainá anao Aho"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": [
+            "Misaotra anao aho ry Ray (x2)",
+            "Fa nomenao saina kinga sy mahay"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 98,
+      "title": "HO AN'I JESOA KRISTY APOKALYPSY 1:5,6",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Ho an'i Jesoa Kristy",
+            "Izay tia antsika",
+            "Ka namaha antsika",
+            "Ho afaka amin'ny fahotantsika",
+            "Tamin'ny rany",
+            "Ho Azy anie ny voninahitra",
+            "Sy ny fanjakana",
+            "Mandrakizay",
+            "Amena ! (2)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 99,
+      "title": "HOY JESOA : AVELAO NY ZAZA MARKA 10:14",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Hoy Jesoa: \"avelao ny zaza hanatona Ahy (2)",
+            "Ary aza raràna fa an'ny toa azy, an'ny toa azy",
+            "Fa an'ny toa azy ny fanjakan'Andriamanitra\""
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 100,
+      "title": "INDRO EFA MITSANGANA AHO APOKALYPSY 3:20",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Indro efa mitsangana eo am-baravarana Aho ka mandondona",
+            "Raha misy mihaino ny feoko ka mamoha ny varavarana",
+            "Dia hiditra Aho ka hiaraka misakafo aminy ary izy amiko"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 101,
+      "title": "JESOA NO AO ANATY SAMBOKELIKO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Jesoa no ao anaty sambokeliko",
+            "Tsy hatahotra (2x)",
+            "Jesoa no anaty sambokeliko",
+            "Ka ho mandrakizay",
+            "Roso an-danitra (2x)",
+            "Jesoa no anaty sambokeliko",
+            "Ka ho mandrakizay"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 102,
+      "title": "JESOA TSARA HO AHY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Jesoa tsara ho ahy (2x)",
+            "Mitantana ahy, mihazona ahy",
+            "Jesoa tsara ho ahy."
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Jesoa mamiko (2x)",
+            "Mitantana ahy, manaraka ahy",
+            "Izay alehako"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 103,
+      "title": "MAMAKIA NY BAIBOLINAO",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mamakia ny Baibolinao, Baibolinao, Baibolinao",
+            "Mivavaha isan'andro dia handresy ianao",
+            "Dia handresy ianao (2x)"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 104,
+      "title": "MISAOTRA, MISAOTRA JESOA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Misaotra, Misaotra Jesoa (2x)",
+            "Misaotra, Misaotra Jesoa eram-po (D.C.)"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Merci, merci Jesus (2x)",
+            "Merci, merci Jesus de tout coeur (D.C.)"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Thank you, thank you Jesus (2x)",
+            "Thank you, thank you Jesus in my heart"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 105,
+      "title": "MITEHAFA TANANA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Mitehafa tànana ry firenen-drehetra",
+            "Mihobia (2) ho an'Andriamanitra ô !",
+            "Mitehafa tànana ry firenen-drehetra",
+            "Mihobia (2) ho an'Andriamanitra",
+            "Fa Jehovah no avo indrindra",
+            "Ka tokony hatahorana"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 106,
+      "title": "MI + TE + NE + NA I SAMOELA 3:9",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "\"M\" ampiana \"I\" manao hoe \"MI\"",
+            "\"T\" ampiana \"E\" manao hoe \"TE\"",
+            "\"N\" ampiana \"E\" manao hoe \"NE\"",
+            "\"N\" ampiana \"A\" manao hoe \"NA\"",
+            "\"Reo rehetra ireo hatambatra",
+            "Dia manao hoe: mitenena",
+            "Mitenena Jehovah ô",
+            "Fa mihaino ny mpanomponao"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 107,
+      "title": "O MATOKIA AN'I JEHOVAH OHABOLANA 3:5,6",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "O matokia an'i Jehovah amin'ny fonao rehetra",
+            "Fa aza miankina amin'ny fahalalanao",
+            "Maneke Azy amin'ny alehanao rehetra",
+            "Fa Izy handamina ny làlanao (2)",
+            "O matokia an'i Jehovah amin'ny fonao rehetra",
+            "Fa aza miankina amin'ny fahalalanao",
+            "Maneke Azy amin'ny alehanao rehetra"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 108,
+      "title": "SATRIA RAHA MANAIKY ROMANA 10:9",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Satria raha manaiky an'i Jesoa Tompo amin'ny vavanao ianao",
+            "Ary mino amin'ny fonao fa Andriamanitra",
+            "Efa nanangana Azy tamin'ny maty (2)",
+            "Dia hovonjena ianao"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 109,
+      "title": "TAMIN'NY VOALOHANY NY TENY JAONA 1:1",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tamin'ny voalohany ny teny",
+            "Ary ny Teny tao amin'Andriamanitra",
+            "Ary ny Teny dia Andriamanitra (2)",
+            "Ary ny Teny dia tonga nofo",
+            "Ka nonina tamintsika"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 110,
+      "title": "TIAKO I JESOA",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tiako, tianao re i Jesoa",
+            "Tiantsika i Jesoa",
+            "Avia mitehafa",
+            "Mitehafa Haleloia",
+            "Mitehafa Amena",
+            "Mitehafa Haleloia",
+            "Mitehafa Amena"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 111,
+      "title": "TOMPO O ! MALALANAY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Tompo ô ! malalanay",
+            "Indreto izahay",
+            "Vonona hianatra",
+            "Ny Teny Masinao",
+            "Hampahirato ny masonay",
+            "Jesoa malala ô !",
+            "Hahita zava-mahagaga",
+            "Ao amin'ny Teninao"
+          ]
+        },
+        {
+          "verse_number": 2,
+          "lines": [
+            "Hampahirato ny masonay",
+            "Jesoa malala ô !",
+            "Hahita zava-mahagaga",
+            "Ao amin'ny Teninao"
+          ]
+        },
+        {
+          "verse_number": 3,
+          "lines": [
+            "Hazavao ny sainay",
+            "Sokafy ny molotray",
+            "Diovy ny fonay",
+            "Hamasino ny fanahinay",
+            "Mba ho mendrika ny ho zanakao"
+          ]
+        },
+        {
+          "verse_number": 4,
+          "lines": ["Tompo ô! Malalanay"]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 112,
+      "title": "VAOVAO MAHAFALY",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Vaovao mahafaly, maty ho anao Kristy",
+            "Vaovao mahafaly, koa mifalia",
+            "Vaovao mahafaly, raiso Izy izao",
+            "Dia ho velona ianao, IANAO!"
+          ]
+        }
+      ],
+      "chorus": null
+    },
+    {
+      "section": "HIRAN'NY ANKIZY",
+      "id": 113,
+      "title": "VOASORATRA HOE MATIO 4:10",
+      "verses": [
+        {
+          "verse_number": 1,
+          "lines": [
+            "Voasoratra hoe: Jehovah Andriamanitra",
+            "No iankohofanao (2)",
+            "Voasoratra hoe: Jehovah Andriamanitra",
+            "No iankohofanao",
+            "Ary Izy irery ihany no tompoinao"
+          ]
+        }
+      ],
+      "chorus": null
+    }
+  ]
+}

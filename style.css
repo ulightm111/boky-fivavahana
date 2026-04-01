@@ -20,16 +20,55 @@ header {
   font-size: 20px;
   text-transform: uppercase;
 }
+
 #headerSubtitle {
   font-size: 18px;
 }
 
-#subText {
+#intro {
   font-size: 0.8rem;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
   text-align: center;
 }
+
+#headnote {
+  font-size: 0.7rem;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  font-weight: 600;
+}
+
+#footnote {
+  font-size: 0.7rem;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-style: italic;
+}
+
+.verse {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.5em;
+  align-items: start;
+  border-bottom: 1px solid #ffadad;
+  padding: 8px 0;
+}
+
+.verse p {
+  margin: 0;
+  line-height: normal;
+}
+
+.chorus-title {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.chorus {
+  display: block;
+}
+
 .searchField {
   width: 100%;
   padding: 10px;
@@ -359,4 +398,28 @@ header {
     width: 19px;
     height: 19px;
   }
+}
+
+/* Accordion styles */
+.accordion-header {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  padding: 8px;
+  margin-top: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.accordion-content {
+  margin-left: 0;
+}
+
+.accordion-song {
+  margin-left: 20px;
+}
+
+/* Toggle button styles */
+#floatingToggleBtn {
+  font-weight: 700;
+  font-size: 13px;
 }

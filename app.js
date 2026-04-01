@@ -1,4 +1,7 @@
 let books, chapters, titles, contents;
+let hiraSongs = [];
+let haaSongs = [];
+let salamoPsalms = [];
 let navigationStack = [];
 let currentView = null;
 let searchResults = [];
@@ -13,8 +16,8 @@ let currentTitlesList = []; // Store current list of titles for prev/next naviga
 let autoScrollInterval = null;
 let autoScrolling = false;
 const AUTO_SCROLL_SPEED = 10; // px per second
-const specialBooks = ["Fihirana", "Salamo", "H.A.A"];
-const numberedBooks = ["Fihirana", "H.A.A"];
+const specialBooks = ["Fihirana", "Salamo", "Hanandratra Anao Aho"];
+const numberedBooks = ["Fihirana", "Hanandratra Anao Aho"];
 
 // Load saved font size on page load
 async function loadFontSize() {
@@ -27,9 +30,16 @@ async function loadFontSize() {
 
 async function loadData() {
     books = await fetch("data/books.json").then(r => r.json());
-    chapters = await fetch("data/chapters.json").then(r => r.json());
-    titles = await fetch("data/titles.json").then(r => r.json());
-    contents = await fetch("data/contents.json").then(r => r.json());
+
+    // New rewritten structured data sources for special books.
+    hiraSongs = await fetch("data/HIRA.json").then(r => r.json()).then(d => d.songs || []);
+    haaSongs = await fetch("data/HAA.json").then(r => r.json()).then(d => d.songs || []);
+    salamoPsalms = await fetch("data/SALAMO.json").then(r => r.json()).then(d => d.psalms || []);
+
+    // old data intentionally ignored for now.
+    chapters = [];
+    titles = [];
+    contents = [];
 
     setupSearch();
     showBooks();
@@ -108,18 +118,19 @@ function removeFloatingToggle() {
     if (btn) btn.style.display = "none";
 }
 
-function renderSpecialToggle(bookId, mode = "chapters") {
+function renderToggleButton(bookId, currentMode) {
     const btn = document.getElementById("floatingToggleBtn");
     if (!btn) return;
     btn.style.display = "flex";
-    btn.style.fontWeight = "700";
-    btn.style.fontSize = "13px";
-    if (mode === "chapters") {
-        btn.innerText = "123";
-        btn.onclick = () => showPageSortedTitles(bookId);
+
+    if (currentMode === "sections") {
+        btn.innerText = "📋";
+        btn.title = "Switch to titles view";
+        btn.onclick = () => showFlatSongsView(bookId);
     } else {
-        btn.innerText = "Ch";
-        btn.onclick = () => showChapters(bookId);
+        btn.innerText = "🏷️";
+        btn.title = "Switch to sections view";
+        btn.onclick = () => showGroupedSongsView(bookId);
     }
 }
 
@@ -202,49 +213,54 @@ function toggleGlobalSearch() {
 
 function performSearch(query, scopeBookId = null) {
     searchResults = [];
+    const normalized = query.toLowerCase().trim();
+    if (!normalized) {
+        showSearchResults();
+        return;
+    }
 
-    // Search books (respect scope if provided)
-    books.forEach(book => {
-        if (book.cat_name.toLowerCase().includes(query)) {
-            if (scopeBookId == null || book.id == scopeBookId) {
-                searchResults.push({ type: "book", id: book.id, title: book.cat_name });
+    // Search books (only new ones)
+    books
+        .filter(book => specialBooks.includes(book.name))
+        .forEach(book => {
+            if (book.name.toLowerCase().includes(normalized)) {
+                if (scopeBookId == null || book.id == scopeBookId) {
+                    searchResults.push({ type: "book", id: book.id, title: book.name });
+                }
             }
-        }
+        });
+
+    // Search HIRA and H.A.A songs
+    [
+        { bookName: "Fihirana", bookId: books.find(b => b.name === "Fihirana")?.id, data: hiraSongs },
+        { bookName: "H.A.A", bookId: books.find(b => b.name === "H.A.A")?.id, data: haaSongs }
+    ].forEach(bookInfo => {
+        if (!bookInfo.bookId) return;
+        if (scopeBookId != null && scopeBookId != bookInfo.bookId) return;
+
+        bookInfo.data.forEach(song => {
+            let matched = false;
+            if (String(song.id).toLowerCase().includes(normalized)) matched = true;
+            if (!matched && song.title && song.title.toLowerCase().includes(normalized)) matched = true;
+
+            if (matched) {
+                searchResults.push({ type: "song", bookId: bookInfo.bookId, id: song.id, title: song.title, subtitle: `${bookInfo.bookName} → ${song.section || ""}` });
+            }
+        });
     });
 
-    // Search chapters (must belong to scope if provided)
-    chapters.forEach(ch => {
-        if (ch.chp_title.toLowerCase().includes(query)) {
-            if (scopeBookId == null || ch.book_id == scopeBookId) {
-                const book = books.find(b => b.id == ch.book_id);
-                searchResults.push({ type: "chapter", id: ch.id, bookId: ch.book_id, title: ch.chp_title, subtitle: book ? book.cat_name : "" });
-            }
-        }
-    });
+    // Search Salamo psalms
+    const salamoBookId = books.find(b => b.name === "Salamo")?.id;
+    if ((scopeBookId == null || scopeBookId == salamoBookId) && salamoBookId != null) {
+        salamoPsalms.forEach(psalm => {
+            let matched = false;
+            if (String(psalm.id).includes(normalized)) matched = true;
 
-    // Search titles (must belong to scope if provided)
-    titles.forEach(t => {
-        // match by title text
-        let matched = false;
-        if (t.text.toLowerCase().includes(query)) matched = true;
-        const chapter = chapters.find(c => c.id == t.chapter_id);
-        if (!chapter) return;
-        // check content page number for special books
-        const bookForTitle = books.find(b => b.id == chapter.book_id);
-        if (!matched && specialBooks.includes(bookForTitle ? bookForTitle.cat_name : "")) {
-            const contentForTitle = contents.find(c => c.id_title == t.id);
-            if (contentForTitle && String(t.number).toLowerCase().includes(query)) {
-                matched = true;
+            if (matched) {
+                searchResults.push({ type: "psalm", id: psalm.id, title: `Salamo ${psalm.id}` });
             }
-        }
-
-        if (matched) {
-            if (scopeBookId == null || chapter.book_id == scopeBookId) {
-                const book = bookForTitle;
-                searchResults.push({ type: "title", id: t.id, number: t.number, chapterId: t.chapter_id, bookId: chapter.book_id, title: t.text, subtitle: `${book ? book.cat_name : ""} → ${chapter.chp_title}` });
-            }
-        }
-    });
+        });
+    }
 
     showSearchResults();
 }
@@ -260,15 +276,7 @@ function showSearchResults() {
         const div = document.createElement("div");
         div.className = "item";
 
-        // if this is a title result and has a page number, show it before the title
         let displayTitle = result.title;
-        if (result.type === "title") {
-            const contentForResult = contents.find(c => c.id_title == result.id);
-            if (contentForResult && result.number) {
-                displayTitle = `${result.number} - ${displayTitle}`;
-            }
-        }
-
         if (result.subtitle) {
             div.innerHTML = `<strong>${displayTitle}</strong><br><small style="color: #666;">${result.subtitle}</small>`;
         } else {
@@ -286,24 +294,25 @@ function showSearchResults() {
 
             if (result.type === "book") {
                 navigationStack.push(showBooks);
-                showChapters(result.id);
-            } else if (result.type === "chapter") {
+                showSections(result.id);
+            } else if (result.type === "song") {
                 navigationStack.push(showBooks);
-                navigationStack.push(() => showChapters(result.bookId));
-                showTitles(result.id);
-            } else if (result.type === "title") {
-                navigationStack.push(showBooks);
-                navigationStack.push(() => showChapters(result.bookId));
-                const titleBook = books.find(b => b.id == result.bookId);
-                const isSpecial = !!(titleBook && specialBooks.includes(titleBook.cat_name));
-                const isNumbered = !!(titleBook && numberedBooks.includes(titleBook.cat_name));
-                if (isSpecial) {
-                    // For special books: back goes to the sorted titles list, scrolled to this title
-                    navigationStack.push(() => showPageSortedTitlesAndScroll(result.bookId, result.id));
-                } else {
-                    navigationStack.push(() => showTitles(result.chapterId, isNumbered));
+                navigationStack.push(() => showSections(result.bookId));
+                const book = books.find(b => b.id == result.bookId);
+                if (book && (isHiraBook(book) || isHaaBook(book))) {
+                    const song = getBookData(book).find(item => item.id == result.id);
+                    if (song) {
+                        navigationStack.push(() => showSections(result.bookId));
+                    }
                 }
-                showContent(result.id);
+                showSong(result.bookId, result.id);
+            } else if (result.type === "psalm") {
+                const salamoBook = books.find(b => b.name === "Salamo");
+                if (salamoBook) {
+                    navigationStack.push(showBooks);
+                    navigationStack.push(() => showSections(salamoBook.id));
+                }
+                showSalamoContent(result.id);
             }
         };
 
@@ -343,14 +352,12 @@ function goBack() {
 }
 
 function showBooks() {
-    // remove any floating toggle when showing main books list
     removeFloatingToggle();
 
     navigationStack = [];
     currentView = showBooks;
     updateHeader("Boky Fivavahana");
 
-    // clear scope search
     currentScopeBookId = null;
     const sectionContainer = document.getElementById("sectionSearchContainer");
     if (sectionContainer) sectionContainer.style.display = "none";
@@ -358,329 +365,337 @@ function showBooks() {
     const container = document.getElementById("content");
     container.innerHTML = "";
 
-    books.forEach(book => {
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerText = book.cat_name;
-        div.onclick = () => {
-            navigationStack.push(showBooks);
-            numberedBooks.includes(book.cat_name) ? showPageSortedTitles(book.id) : showChapters(book.id);
-        };
-        container.appendChild(div);
-    });
-}
-
-function showChapters(bookId) {
-    const book = books.find(b => b.id == bookId);
-    const showNumber = specialBooks.includes(book.cat_name);
-
-    // reset to chapters view when entering a book
-    currentBookViewMode = "chapters";
-    currentView = () => showChapters(bookId);
-    updateHeader(book.cat_name);
-
-    // For Salamo and Litorjia Provinsialy jump directly to titles list (skip the single-chapter view)
-    const oneChapterBook = ["Salamo", "Litorjia Provinsialy"]
-    if (book && oneChapterBook.includes(book.cat_name)) {
-        // find first chapter for this book and show its titles; keep back stack as-is
-        const firstChapter = chapters.find(c => c.book_id == bookId);
-        if (firstChapter) {
-            showTitles(firstChapter.id, book.cat_name === "Salamo" ? true : false);
-            return;
-        }
-    }
-
-    // set section scope and show section search
-    currentScopeBookId = bookId;
-    const sectionContainer = document.getElementById("sectionSearchContainer");
-    const sectionField = document.getElementById("sectionSearchField");
-    if (sectionContainer) sectionContainer.style.display = "block";
-    if (sectionField) sectionField.placeholder = `Hitady @${book.cat_name}...`;
-
-    const container = document.getElementById("content");
-    container.innerHTML = "";
-
-    // remove any existing floating toggle button
-    removeFloatingToggle();
-
-    // add floating toggle button for special books
-    if (showNumber) renderSpecialToggle(bookId);
-
-    // Group chapters by name to merge same-named chapters (e.g. in Fihirana)
-    const seen = new Set();
-    const bookChapters = chapters.filter(c => c.book_id == bookId);
-
-    bookChapters.forEach(ch => {
-        if (seen.has(ch.chp_title)) return; // already rendered this group
-        seen.add(ch.chp_title);
-
-        // All chapters in this book with the same name
-        const group = bookChapters.filter(c => c.chp_title === ch.chp_title);
-        const groupIds = group.map(c => c.id);
-        const groupTitles = groupIds.flatMap(cid => titles.filter(t => t.chapter_id == cid));
-
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerText = ch.chp_title;
-        div.onclick = () => {
-            if (groupTitles.length === 1) {
-                // Single title across all same-named chapters — skip list, go to content
-                navigationStack.push(() => showChapters(bookId));
-                showContent(groupTitles[0].id);
-            } else if (group.length > 1) {
-                // Multiple chapters share this name — show merged title list
-                navigationStack.push(() => showChapters(bookId));
-                showGroupedTitles(groupIds, ch.chp_title, showNumber);
-            } else {
-                // Normal single chapter
-                navigationStack.push(() => showChapters(bookId));
-                showTitles(ch.id, showNumber);
-            }
-        };
-        container.appendChild(div);
-    });
-}
-
-function showTitles(chapterId, showNumber = false) {
-    // determine chapter and use its title for the header
-    const chapter = chapters.find(c => c.id == chapterId);
-    const headerTitle = chapter ? chapter.chp_title : "Titles";
-    currentView = () => showTitles(chapterId, showNumber);
-    updateHeader(headerTitle);
-
-    // ensure section search is visible and scoped to chapter's book
-    if (chapter) {
-        currentScopeBookId = chapter.book_id;
-        const sectionContainer = document.getElementById("sectionSearchContainer");
-        const sectionField = document.getElementById("sectionSearchField");
-        const book = books.find(b => b.id == chapter.book_id);
-        if (sectionContainer) sectionContainer.style.display = "block";
-        if (sectionField) sectionField.placeholder = `Hitady @${book ? book.cat_name : "ato"}...`;
-    }
-
-    const container = document.getElementById("content");
-    container.innerHTML = "";
-
-    titles
-        .filter(t => t.chapter_id == chapterId)
-        .forEach(t => {
+    // Only show rewritten data sources for now.
+    books
+        .filter(book => specialBooks.includes(book.name))
+        .forEach(book => {
             const div = document.createElement("div");
             div.className = "item";
-
-            if (showNumber) {
-                div.innerText = `${t.number} - ${t.text}`
-            }
-            else {
-                div.innerText = t.text;
-            }
-
+            div.innerText = book.name;
             div.onclick = () => {
-                navigationStack.push(() => showTitles(chapterId, showNumber));
-                showContent(t.id);
+                navigationStack.push(showBooks);
+                showSections(book.id);
             };
-
             container.appendChild(div);
         });
 
-    const book = books.find(b => b.id == chapter.book_id);
-    const isNumbered = book && numberedBooks.includes(book.cat_name);
-
-    if (isNumbered) renderSpecialToggle(book.id);
-
-}
-
-function showGroupedTitles(chapterIds, groupName, showNumber = false) {
-    currentView = () => showGroupedTitles(chapterIds, groupName, showNumber);
-    updateHeader(groupName);
-
-    // Section search — scope to the book of the first chapter
-    const firstChapter = chapters.find(c => c.id == chapterIds[0]);
-    if (firstChapter) {
-        currentScopeBookId = firstChapter.book_id;
-        const sectionContainer = document.getElementById("sectionSearchContainer");
-        const sectionField = document.getElementById("sectionSearchField");
-        const book = books.find(b => b.id == firstChapter.book_id);
-        if (sectionContainer) sectionContainer.style.display = "block";
-        if (sectionField) sectionField.placeholder = `Hitady @${book ? book.cat_name : "ato"}...`;
+    // If no special books are present, display a placeholder message.
+    if (container.children.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "item";
+        empty.innerText = "Tsy mbola misy boky azo vakiana ankehitriny.";
+        container.appendChild(empty);
     }
-
-    const container = document.getElementById("content");
-    container.innerHTML = "";
-
-    // Collect titles from all chapters in the group, in order
-    const allTitles = chapterIds
-        .flatMap(cid => titles.filter(t => t.chapter_id == cid))
-        .sort((a, b) => (a.number || 0) - (b.number || 0))
-
-    allTitles.forEach(t => {
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerText = showNumber ? `${t.number} - ${t.text}` : t.text;
-        div.onclick = () => {
-            navigationStack.push(() => showGroupedTitles(chapterIds, groupName, showNumber));
-            showContent(t.id);
-        };
-        container.appendChild(div);
-    });
-
-    // Show toggle button for numbered books
-    const book = firstChapter ? books.find(b => b.id == firstChapter.book_id) : null;
-    if (book && numberedBooks.includes(book.cat_name)) renderSpecialToggle(book.id);
 }
 
-function showPageSortedTitles(bookId) {
-    const book = books.find(b => b.id == bookId);
-    currentBookViewMode = "pages";
-    currentView = () => showPageSortedTitles(bookId);
-    updateHeader(book ? book.cat_name : "Page Order");
+function isHiraBook(book) {
+    return book && book.name === "Fihirana";
+}
 
-    // set section scope and show section search
+function isHaaBook(book) {
+    return book && book.name === "H.A.A";
+}
+
+function isSalamoBook(book) {
+    return book && book.name === "Salamo";
+}
+
+function getBookData(book) {
+    if (isHiraBook(book)) return hiraSongs;
+    if (isHaaBook(book)) return haaSongs;
+    if (isSalamoBook(book)) return salamoPsalms;
+    return null;
+}
+
+function showSections(bookId) {
+    const book = books.find(b => b.id == bookId);
+    if (!book) return;
+
+    currentBookViewMode = "sections";
+    currentView = () => showSections(bookId);
+    updateHeader(book.name);
+
     currentScopeBookId = bookId;
     const sectionContainer = document.getElementById("sectionSearchContainer");
     const sectionField = document.getElementById("sectionSearchField");
     if (sectionContainer) sectionContainer.style.display = "block";
-    if (sectionField) sectionField.placeholder = `Hitady @${book ? book.cat_name : "this book"}...`;
+    if (sectionField) sectionField.placeholder = `Hitady @${book.name}...`;
 
-    // get all titles for this book sorted by page number
-    const allTitlesForBook = [];
-    chapters
-        .filter(c => c.book_id == bookId)
-        .forEach(ch => {
-            titles
-                .filter(t => t.chapter_id == ch.id)
-                .forEach(t => {
-                    allTitlesForBook.push({
-                        title: t,
-                        chapter: ch,
-                        pageNumber: t.number
-                    });
-                });
-        });
-    // sort by page number ascending
-    allTitlesForBook.sort((a, b) => (a.pageNumber || 0) - (b.pageNumber || 0));
+    removeFloatingToggle();
+
+    if (isHiraBook(book) || isHaaBook(book)) {
+        showFlatSongsView(bookId);
+        return;
+    }
+
+    if (isSalamoBook(book)) {
+        showSalamoList(bookId);
+        return;
+    }
+
+    // Non-implemented books for now
+    const container = document.getElementById("content");
+    container.innerHTML = "";
+    const empty = document.createElement("div");
+    empty.className = "item";
+    empty.innerText = "Boky tsy mbola voasoratra ao amin'ny rafitra vaovao. Ho ampiana avy eo.";
+    container.appendChild(empty);
+}
+
+function showGroupedSongsView(bookId) {
+    const book = books.find(b => b.id == bookId);
+    if (!book) return;
+
+    currentView = () => showGroupedSongsView(bookId);
+    updateHeader(book.name);
+    removeFloatingToggle();
+
+    currentScopeBookId = bookId;
+    const sectionContainer = document.getElementById("sectionSearchContainer");
+    const sectionField = document.getElementById("sectionSearchField");
+    if (sectionContainer) sectionContainer.style.display = "block";
+    if (sectionField) sectionField.placeholder = `Hitady @${book.name}...`;
+
+    const source = getBookData(book) || [];
+    // Preserve original order: collect sections as encountered in source
+    const sectionSet = new Set();
+    const sections = [];
+    source.forEach(item => {
+        const section = (item.section || "").trim();
+        if (section && !sectionSet.has(section)) {
+            sectionSet.add(section);
+            sections.push(section);
+        }
+    });
 
     const container = document.getElementById("content");
     container.innerHTML = "";
 
-    renderSpecialToggle(bookId, "pages");
+    sections.forEach((section, idx) => {
+        const accordionId = `accordion-${idx}`;
+        const contentId = `accordion-content-${idx}`;
 
-    // display all titles sorted by page number
-    allTitlesForBook.forEach(item => {
+        // Header (accordion toggle)
+        const headerDiv = document.createElement("div");
+        headerDiv.className = "item accordion-header";
+        headerDiv.innerText = `▶ ${section}`;
+        headerDiv.id = accordionId;
+
+        // Content container (collapsed initially)
+        const contentDiv = document.createElement("div");
+        contentDiv.id = contentId;
+        contentDiv.className = "accordion-content";
+        contentDiv.style.display = "none";
+
+        // Toggle on header click
+        headerDiv.onclick = () => {
+            const isVisible = contentDiv.style.display !== "none";
+            if (isVisible) {
+                contentDiv.style.display = "none";
+                headerDiv.innerText = `▶ ${section}`;
+            } else {
+                contentDiv.style.display = "block";
+                headerDiv.innerText = `▼ ${section}`;
+            }
+        };
+
+        container.appendChild(headerDiv);
+        container.appendChild(contentDiv);
+
+        // Collect songs for this section
+        const sectionSongs = source.filter(item => (item.section || "").trim() === section);
+        sectionSongs.forEach(song => {
+            const songDiv = document.createElement("div");
+            songDiv.className = "item accordion-song";
+            songDiv.innerText = `${song.id} - ${song.title}`;
+            songDiv.onclick = () => {
+                navigationStack.push(() => showGroupedSongsView(bookId));
+                showSong(bookId, song.id);
+            };
+            contentDiv.appendChild(songDiv);
+        });
+    });
+
+    renderToggleButton(bookId, "sections");
+}
+
+function showFlatSongsView(bookId) {
+    const book = books.find(b => b.id == bookId);
+    if (!book) return;
+
+    currentView = () => showFlatSongsView(bookId);
+    updateHeader(book.name);
+    removeFloatingToggle();
+
+    currentScopeBookId = bookId;
+    const sectionContainer = document.getElementById("sectionSearchContainer");
+    const sectionField = document.getElementById("sectionSearchField");
+    if (sectionContainer) sectionContainer.style.display = "block";
+    if (sectionField) sectionField.placeholder = `Hitady @${book.name}...`;
+
+    const source = getBookData(book) || [];
+    const container = document.getElementById("content");
+    container.innerHTML = "";
+
+    // Display all songs in a flat list, sorted by id
+    source
+        .sort((a, b) => (a.id || 0) - (b.id || 0))
+        .forEach(song => {
+            const div = document.createElement("div");
+            div.className = "item";
+            div.innerText = `${song.id} - ${song.title}`;
+            div.onclick = () => {
+                navigationStack.push(() => showFlatSongsView(bookId));
+                showSong(bookId, song.id);
+            };
+            container.appendChild(div);
+        });
+
+    renderToggleButton(bookId, "titles");
+}
+
+function showSong(bookId, songId) {
+    const book = books.find(b => b.id == bookId);
+    const source = getBookData(book) || [];
+    const song = source.find(item => item.id == songId);
+    if (!song) return;
+
+    const bookTitle = book ? book.name : "";
+    currentView = () => showSong(bookId, songId);
+
+    let headerSubtitle = `${song.id} - ${song.title}`;
+    updateHeader(bookTitle, headerSubtitle);
+
+    const sectionContainer = document.getElementById("sectionSearchContainer");
+    if (sectionContainer) sectionContainer.style.display = "none";
+
+    const lines = [];
+
+    if (song.intro) {
+        lines.push(`<div id=\"intro\">${song.intro}</div>`);
+    }
+    if (song.headnote) {
+        lines.push(`<div id=\"headnote\">${song.headnote}</div>`);
+    }
+
+    if (song.verses && song.verses.length > 0) {
+        song.verses.forEach(v => {
+
+            if (v.verse_number === 2 && song.chorus && song.chorus.length > 0) {
+                lines.push("<div class=\"verse chorus\">")
+                lines.push(`<div class=\"chorus-title\">Fiverenana:</div>`);
+                lines.push("<p>")
+                lines.push(song.chorus.join("<br />"));
+                lines.push("</p>")
+                lines.push('</div>');
+            }
+
+            lines.push("<div class=\"verse\">")
+            lines.push(`<span><strong>${v.verse_number}.</strong></span>`);
+            const verseLines = Array.isArray(v.lines) ? v.lines : [v.lines];
+            lines.push("<p>")
+            lines.push(verseLines.join("<br />"));
+            lines.push("</p>");
+            lines.push('</div>');
+        });
+    }
+
+    if (song.footnote) {
+        lines.push(`<div id=\"footnote\">${song.footnote}</div>`);
+    }
+
+    currentContentHtml = lines.join("\n");
+    renderContent(currentContentHtml);
+
+    // Setup prev/next listing scoped to the entire book
+    currentTitlesList = source;
+    currentTitleIndex = source.findIndex(item => item.id == songId);
+
+    updateBottomNav();
+}
+
+function showSalamoList(bookId) {
+    const book = books.find(b => b.id == bookId);
+    currentView = () => showSalamoList(bookId);
+    updateHeader(book ? book.name : "Salamo");
+
+    currentScopeBookId = bookId;
+    const sectionContainer = document.getElementById("sectionSearchContainer");
+    const sectionField = document.getElementById("sectionSearchField");
+    if (sectionContainer) sectionContainer.style.display = "block";
+    if (sectionField) sectionField.placeholder = `Hitady @${book ? book.name : "ato"}...`;
+
+    const container = document.getElementById("content");
+    container.innerHTML = "";
+
+    salamoPsalms.forEach(psalm => {
         const div = document.createElement("div");
         div.className = "item";
-        div.dataset.titleId = item.title.id;
-        div.innerText = `${item.pageNumber} - ${item.title.text}`;
+        div.innerText = `Salamo ${psalm.id}`;
         div.onclick = () => {
-            navigationStack.push(() => showPageSortedTitlesAndScroll(bookId, item.title.id));
-            showContent(item.title.id);
+            navigationStack.push(() => showSalamoList(bookId));
+            showSalamoContent(psalm.id);
         };
         container.appendChild(div);
     });
 }
 
-function showPageSortedTitlesAndScroll(bookId, titleId) {
-    showPageSortedTitles(bookId);
-    // After render, scroll the matching item into view
-    requestAnimationFrame(() => {
-        const el = document.querySelector(`.item[data-title-id="${titleId}"]`);
-        if (el) el.scrollIntoView({ behavior: "instant", block: "center" });
-    });
-}
+function showSalamoContent(psalmId) {
+    const psalm = salamoPsalms.find(p => p.id == psalmId);
+    const book = books.find(b => b.name === "Salamo");
+    if (!psalm || !book) return;
 
-function showAbout() {
-    currentView = showAbout;
-    updateHeader("Mombamomba");
-    if (navigationStack.length === 0) {
-        navigationStack = [showBooks];
-        updateBottomNav();
-    }
+    currentView = () => showSalamoContent(psalmId);
+    updateHeader(book.name, `Salamo ${psalm.id}`);
 
-    const navMenu = document.getElementById("navMenu");
-    if (navMenu) navMenu.style.display = "none";
-
-    if (navOutsideHandler) {
-        document.removeEventListener("mousedown", navOutsideHandler);
-        navOutsideHandler = null;
-    }
-
-    // hide section search and remove toggle button
-    const sectionContainer = document.getElementById("sectionSearchContainer");
-    if (sectionContainer) sectionContainer.style.display = "none";
-    removeFloatingToggle();
-
-    const container = document.getElementById("content");
-    if (container) {
-        container.innerHTML = `
-        <h2>Boky Fivavahana Anglikana</h2>
-        <p>Voninahitra ho an'Andriamanitra irery ihany.</p>
-        <p>Raha misy olana na fanamarihana: <a href="mailto:tsiorymanana7@gmail.com">tsiorymanana7@gmail.com</a> / +261347048504</p>
-        <p>Mampiasà finaritra.</p>
-        <footer>Credits to <i>FEEM NTIC - Lead Code Group</i>.</footer>
-        `;
-    }
-}
-
-function showContent(titleId) {
-    // ensure toggle is removed while reading content
-    removeFloatingToggle();
-
-    // set header to title (and page number for special books)
-    const titleObj = titles.find(t => t.id == titleId);
-    const chapterObj = chapters.find(c => c.id == (titleObj ? titleObj.chapter_id : null));
-    const bookObj = chapterObj ? books.find(b => b.id == chapterObj.book_id) : null;
-    let headerSubtitle = titleObj ? titleObj.text : "Content";
-    let itemSubText = ""
-    if (bookObj && specialBooks.includes(bookObj.cat_name)) {
-        const itemContent = contents.find(c => c.id_title == titleId);
-        itemSubText = itemContent.ct_subtext
-        if (itemContent && titleObj.number) {
-            headerSubtitle = `${titleObj.number} - ${titleObj.text}`;
-        }
-
-    }
-    updateHeader(bookObj.cat_name, headerSubtitle);
-
-    // hide section search while reading content
     const sectionContainer = document.getElementById("sectionSearchContainer");
     if (sectionContainer) sectionContainer.style.display = "none";
 
-    const container = document.getElementById("content");
-    // Find the first contents entry for this title and append any immediately following
-    // entries that have the same id_title (concatenate contiguous parts)
-    const startIndex = contents.findIndex(c => c.id_title == titleId);
-    let combinedHtml = "";
-    if (startIndex !== -1) {
-        for (let i = startIndex; i < contents.length; i++) {
-            const c = contents[i];
-            if (c.id_title == titleId) {
-                combinedHtml += (c.ct_lyrics || "");
-            } else {
-                break;
-            }
-        }
+    const lines = [];
+    if (psalm.verses && psalm.verses.length > 0) {
+        psalm.verses.forEach(v => {
+            const verseLines = Array.isArray(v.lines) ? v.lines : [v.lines];
+            verseLines.forEach(line => {
+                lines.push(`<p class=\"line\"><strong>${v.verse_number}.</strong> ${line}</p>`);
+            });
+        });
     }
-    const item = { ct_lyrics: combinedHtml };
 
-    // Track title index for prev/next buttons
-    // Determine book
-    const bookId = chapterObj.book_id;
-
-    // Build full ordered list of titles for the entire book
-    const bookTitles = [];
-    chapters
-        .filter(c => c.book_id == bookId)
-        .forEach(ch => bookTitles.push(...titles.filter(t => t.chapter_id == ch.id)));
-    bookTitles.sort((a, b) => (a.number || 0) - (b.number || 0));
-
-    currentTitlesList = bookTitles;
-    currentTitleIndex = currentTitlesList.findIndex(t => t.id == titleId);
-
-    // Store original HTML for zoom scaling and render with current zoom
-    currentContentHtml = itemSubText ? `<div id="subText">${itemSubText}</div><hr />` + item.ct_lyrics : item.ct_lyrics;
+    currentContentHtml = lines.join("\n");
     renderContent(currentContentHtml);
+
+    currentTitlesList = salamoPsalms.map(p => ({ id: p.id }));
+    currentTitleIndex = currentTitlesList.findIndex(p => p.id == psalmId);
+
     updateBottomNav();
 }
 
+
+function showContent(titleId) {
+    const book = books.find(b => b.id == currentScopeBookId);
+    if (!book) return;
+
+    if (isHiraBook(book) || isHaaBook(book)) {
+        showSong(currentScopeBookId, titleId);
+    } else if (isSalamoBook(book)) {
+        showSalamoContent(titleId);
+    } else {
+        // legacy placeholder for other books
+        removeFloatingToggle();
+        updateHeader(book ? book.name : "Boky", "Content tsy misy amin'izao rafitra vaovao izao");
+
+        const sectionContainer = document.getElementById("sectionSearchContainer");
+        if (sectionContainer) sectionContainer.style.display = "none";
+
+        const container = document.getElementById("content");
+        container.innerHTML = "<div class='item'>Tsy azo jerena amin&#39;ity drafitra vaovao ity ny pejy taloha.</div>";
+
+        currentContentHtml = container.innerHTML;
+        currentTitlesList = [];
+        currentTitleIndex = -1;
+        updateBottomNav();
+    }
+}
 
 function toggleMenu() {
     const menu = document.getElementById("navMenu");
@@ -723,10 +738,10 @@ function navigateToBook(bookName) {
     if (s) s.value = "";
     searchResults = [];
 
-    const book = books.find(b => b.cat_name === bookName);
+    const book = books.find(b => b.name === bookName);
     if (book) {
         navigationStack = [showBooks];
-        showChapters(book.id);
+        showSections(book.id);
     }
 }
 
@@ -813,6 +828,39 @@ function toggleAutoScroll() {
         stopAutoScroll();
     } else {
         startAutoScroll();
+    }
+}
+
+
+function showAbout() {
+    currentView = showAbout;
+    updateHeader("Mombamomba");
+    if (navigationStack.length === 0) {
+        navigationStack = [showBooks];
+        updateBottomNav();
+    }
+
+    const navMenu = document.getElementById("navMenu");
+    if (navMenu) navMenu.style.display = "none";
+
+    if (navOutsideHandler) {
+        document.removeEventListener("mousedown", navOutsideHandler);
+        navOutsideHandler = null;
+    }
+
+    // hide section search and remove toggle button
+    const sectionContainer = document.getElementById("sectionSearchContainer");
+    if (sectionContainer) sectionContainer.style.display = "none";
+    removeFloatingToggle();
+
+    const container = document.getElementById("content");
+    if (container) {
+        container.innerHTML = `
+        <h2>Boky Fivavahana Anglikana</h2>
+        <p>Voninahitra ho an'Andriamanitra irery ihany.</p>
+        <p>Raha misy olana na fanamarihana: <a href="mailto:tsiorymanana7@gmail.com">tsiorymanana7@gmail.com</a> / +261347048504</p>
+        <p>Mampiasà finaritra.</p>
+        `;
     }
 }
 
