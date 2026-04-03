@@ -15,7 +15,8 @@ let currentFontSize = 100; // percentage, default 100%
 let currentContentHtml = null; // Store original HTML content for zoom scaling
 let currentTitleIndex = -1; // Track current title index for prev/next navigation
 let currentTitlesList = []; // Store current list of titles for prev/next navigation
-let currentSectionName = null; // Current section open for LitBF subsection navigation
+let currentSectionName = null; // Current section open for LitBF/LHF subsection navigation
+let currentSearchContext = null; // Track search context: book, section-list, subsection-list, content
 let autoScrollInterval = null;
 let autoScrolling = false;
 const AUTO_SCROLL_SPEED = 8; // px per second
@@ -219,24 +220,64 @@ function performSearch(query, scopeBookId = null) {
         return;
     }
 
-    // Search books (only new ones)
-    books
-        .filter(book => specialBooks.includes(book.name))
-        .forEach(book => {
-            if (book.name.toLowerCase().includes(normalized)) {
-                if (scopeBookId == null || book.id == scopeBookId) {
-                    searchResults.push({ type: "book", id: book.id, title: book.name });
-                }
+    // Determine effective scope
+    const scope = scopeBookId || currentScopeBookId;
+    const isGlobal = scope == null;
+    const scopedBook = scope ? books.find(b => b.id == scope) : null;
+
+    const searchLitStyle = (bookName, contents, sectionType) => {
+        const book = books.find(b => b.name === bookName);
+        if (!book) return;
+        if (!isGlobal && scopedBook && scopedBook.id !== book.id) return;
+
+        contents.forEach(section => {
+            if (section.section.toLowerCase().includes(normalized)) {
+                searchResults.push({
+                    type: sectionType === "litp" ? "litp-section" : "litbf-section",
+                    bookId: book.id, id: section.section, title: section.section
+                });
+            }
+            if (section.subsections && section.subsections.length > 0) {
+                section.subsections.forEach((sub, subIdx) => {
+                    if (sub.subsection.toLowerCase().includes(normalized)) {
+                        searchResults.push({
+                            type: "litbf-subsection", bookId: book.id,
+                            sectionName: section.section, subsectionIndex: subIdx,
+                            title: sub.subsection, subtitle: section.section
+                        });
+                    }
+                });
             }
         });
+    };
+
+    searchLitStyle("Litorjia Boky Fivavahana", litbfContents, "litbf");
+    searchLitStyle("Lalan'ny Hazo Fijaliana", lhfContents, "litbf");
+
+    if (isGlobal || (scopedBook && isLitPBook(scopedBook))) {
+        const book = books.find(b => b.name === "Litorjia Provinsialy");
+        if (book) {
+            const sections = litpContents
+                .map(s => s.section)
+                .filter((s, i, arr) => s && arr.indexOf(s) === i);
+            sections.forEach(section => {
+                if (section.toLowerCase().includes(normalized)) {
+                    searchResults.push({
+                        type: "litp-section", bookId: book.id, id: section,
+                        title: section
+                    });
+                }
+            });
+        }
+    }
 
     // Search HIRA and Hanandratra Anao Aho songs
     [
-        { bookName: "Fihirana", bookId: books.find(b => b.name === "Fihirana")?.id, data: hiraSongs },
-        { bookName: "Hanandratra Anao Aho", bookId: books.find(b => b.name === "Hanandratra Anao Aho")?.id, data: haaSongs }
+        { bookName: "Fihirana", bookId: books.find(b => b.name === "Fihirana")?.id, data: hiraSongs, isHira: true },
+        { bookName: "Hanandratra Anao Aho", bookId: books.find(b => b.name === "Hanandratra Anao Aho")?.id, data: haaSongs, isHira: false }
     ].forEach(bookInfo => {
         if (!bookInfo.bookId) return;
-        if (scopeBookId != null && scopeBookId != bookInfo.bookId) return;
+        if (scope != null && scope != bookInfo.bookId) return;
 
         bookInfo.data.forEach(song => {
             let matched = false;
@@ -244,19 +285,17 @@ function performSearch(query, scopeBookId = null) {
             if (!matched && song.title && song.title.toLowerCase().includes(normalized)) matched = true;
 
             if (matched) {
-                searchResults.push(
-                    {
-                        type: "song", bookId: bookInfo.bookId, id: song.id,
-                        title: `${song.id} - ${song.title}`, subtitle: `${bookInfo.bookName} → ${song.section || ""}`
-                    }
-                );
+                searchResults.push({
+                    type: "song", bookId: bookInfo.bookId, id: song.id,
+                    title: `${song.id} - ${song.title}`, subtitle: `${bookInfo.bookName} → ${song.section || ""}`
+                });
             }
         });
     });
 
     // Search Salamo psalms
     const salamoBookId = books.find(b => b.name === "Salamo")?.id;
-    if ((scopeBookId == null || scopeBookId == salamoBookId) && salamoBookId != null) {
+    if ((scope == null || scope == salamoBookId) && salamoBookId != null) {
         salamoPsalms.forEach(psalm => {
             let matched = false;
             if (String(psalm.id).includes(normalized)) matched = true;
@@ -300,6 +339,25 @@ function showSearchResults() {
             if (result.type === "book") {
                 navigationStack.push(showBooks);
                 showSections(result.id);
+            } else if (result.type === "litbf-section" || result.type === "litp-section") {
+                const book = books.find(b => b.id == result.bookId);
+                if (book) {
+                    navigationStack.push(showBooks);
+                    navigationStack.push(() => showSections(result.bookId));
+                    if (isLitPBook(book)) {
+                        showLitPSectionContent(result.bookId, result.id);
+                    } else {
+                        showSectionContent(result.bookId, result.id);
+                    }
+                }
+            } else if (result.type === "litbf-subsection") {
+                const book = books.find(b => b.id == result.bookId);
+                if (book) {
+                    navigationStack.push(showBooks);
+                    navigationStack.push(() => showSections(result.bookId));
+                    navigationStack.push(() => showSectionContent(result.bookId, result.sectionName));
+                    showSubsectionContent(result.bookId, result.sectionName, result.subsectionIndex);
+                }
             } else if (result.type === "song") {
                 navigationStack.push(showBooks);
                 navigationStack.push(() => showSections(result.bookId));
