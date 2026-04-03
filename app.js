@@ -4,6 +4,7 @@ let haaSongs = [];
 let salamoPsalms = [];
 let litpContents = [];
 let litbfContents = [];
+let lhfContents = [];
 let navigationStack = [];
 let currentView = null;
 let searchResults = [];
@@ -14,7 +15,7 @@ let currentFontSize = 100; // percentage, default 100%
 let currentContentHtml = null; // Store original HTML content for zoom scaling
 let currentTitleIndex = -1; // Track current title index for prev/next navigation
 let currentTitlesList = []; // Store current list of titles for prev/next navigation
-let currentLitBFSectionName = null; // Current section open for LitBF subsection navigation
+let currentSectionName = null; // Current section open for LitBF subsection navigation
 let autoScrollInterval = null;
 let autoScrolling = false;
 const AUTO_SCROLL_SPEED = 8; // px per second
@@ -38,6 +39,7 @@ async function loadData() {
     salamoPsalms = await fetch("data/SALAMO.json").then(r => r.json()).then(d => d.psalms || []);
     litpContents = await fetch("data/LitP.json").then(r => r.json()).then(d => d.contents || []);
     litbfContents = await fetch("data/LitBF.json").then(r => r.json()).then(d => d.sections || []);
+    lhfContents = await fetch("data/LHF.json").then(r => r.json()).then(d => d.sections || []);
 
     setupSearch();
     showBooks();
@@ -409,12 +411,17 @@ function isLitBFBook(book) {
     return book && book.name === "Litorjia Boky Fivavahana";
 }
 
+function isLHFBook(book) {
+    return book && book.name === "Lalan'ny Hazo Fijaliana";
+}
+
 function getBookData(book) {
     if (isHiraBook(book)) return hiraSongs;
     if (isHaaBook(book)) return haaSongs;
     if (isSalamoBook(book)) return salamoPsalms;
     if (isLitPBook(book)) return litpContents;
     if (isLitBFBook(book)) return litbfContents;
+    if (isLHFBook(book)) return lhfContents;
     return null;
 }
 
@@ -448,18 +455,38 @@ function showSections(bookId) {
         return;
     }
 
-    if (isLitBFBook(book)) {
-        showLitBFSections(bookId);
+    currentView = () => showSections(bookId);
+    updateHeader(book.name);
+    removeFloatingToggle();
+
+    currentScopeBookId = bookId;
+    currentSectionName = null;
+
+    const container = document.getElementById("content");
+    container.innerHTML = "";
+
+    const sections = isLitBFBook(book) ?
+        litbfContents.map(sectionObj => sectionObj.section)
+        : lhfContents.map(sectionObj => sectionObj.section);
+
+    if (sections.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "item";
+        empty.innerText = "Tsy misy fizaràna";
+        container.appendChild(empty);
         return;
     }
 
-    // Non-implemented books for now
-    const container = document.getElementById("content");
-    container.innerHTML = "";
-    const empty = document.createElement("div");
-    empty.className = "item";
-    empty.innerText = "Boky tsy mbola voasoratra ao amin'ny rafitra vaovao. Ho ampiana avy eo.";
-    container.appendChild(empty);
+    sections.forEach(section => {
+        const div = document.createElement("div");
+        div.className = "item";
+        div.innerText = section;
+        div.onclick = () => {
+            navigationStack.push(() => showSections(bookId));
+            showSectionContent(bookId, section);
+        };
+        container.appendChild(div);
+    });
 }
 
 function showGroupedSongsView(bookId) {
@@ -702,27 +729,12 @@ function showContent(titleId) {
         showSalamoContent(titleId);
     } else if (isLitPBook(book)) {
         showLitPSectionContent(currentScopeBookId, titleId);
-    } else if (isLitBFBook(book)) {
-        if (currentLitBFSectionName) {
-            showLitBFSubsectionContent(currentScopeBookId, currentLitBFSectionName, Number(titleId));
-        } else {
-            showLitBFSectionContent(currentScopeBookId, titleId);
-        }
     } else {
-        // legacy placeholder for other books
-        removeFloatingToggle();
-        updateHeader(book ? book.name : "Boky", "Content tsy misy amin'izao rafitra vaovao izao");
-
-        const sectionContainer = document.getElementById("sectionSearchContainer");
-        if (sectionContainer) sectionContainer.style.display = "none";
-
-        const container = document.getElementById("content");
-        container.innerHTML = "<div class='item'>Tsy azo jerena amin&#39;ity drafitra vaovao ity ny pejy taloha.</div>";
-
-        currentContentHtml = container.innerHTML;
-        currentTitlesList = [];
-        currentTitleIndex = -1;
-        updateBottomNav();
+        if (currentSectionName) {
+            showSubsectionContent(currentScopeBookId, currentSectionName, Number(titleId));
+        } else {
+            showSectionContent(currentScopeBookId, titleId);
+        }
     }
 }
 
@@ -760,45 +772,6 @@ function showLitPSections(bookId) {
         div.onclick = () => {
             navigationStack.push(() => showLitPSections(bookId));
             showLitPSectionContent(bookId, section);
-        };
-        container.appendChild(div);
-    });
-}
-
-function showLitBFSections(bookId) {
-    const book = books.find(b => b.id == bookId);
-    if (!book) return;
-
-    currentView = () => showLitBFSections(bookId);
-    updateHeader(book.name);
-    removeFloatingToggle();
-
-    currentScopeBookId = bookId;
-    currentLitBFSectionName = null;
-
-    const sectionContainer = document.getElementById("sectionSearchContainer");
-    if (sectionContainer) sectionContainer.style.display = "none";
-
-    const container = document.getElementById("content");
-    container.innerHTML = "";
-
-    const sections = litbfContents.map(sectionObj => sectionObj.section);
-
-    if (sections.length === 0) {
-        const empty = document.createElement("div");
-        empty.className = "item";
-        empty.innerText = "Tsy misy fizarana hita ao amin'ny Litorjia Boky Fivavahana.";
-        container.appendChild(empty);
-        return;
-    }
-
-    sections.forEach(section => {
-        const div = document.createElement("div");
-        div.className = "item";
-        div.innerText = section;
-        div.onclick = () => {
-            navigationStack.push(() => showLitBFSections(bookId));
-            showLitBFSectionContent(bookId, section);
         };
         container.appendChild(div);
     });
@@ -846,14 +819,15 @@ function showLitPSectionContent(bookId, sectionName) {
     updateBottomNav();
 }
 
-function showLitBFSectionContent(bookId, sectionName) {
+function showSectionContent(bookId, sectionName) {
     const book = books.find(b => b.id == bookId);
     if (!book) return;
+    const contents = getBookData(book);
 
-    const sectionObj = litbfContents.find(s => s.section === sectionName);
+    const sectionObj = contents.find(s => s.section === sectionName);
     if (!sectionObj) return;
 
-    currentView = () => showLitBFSectionContent(bookId, sectionName);
+    currentView = () => showSectionContent(bookId, sectionName);
     updateHeader(sectionName, book.name);
     removeFloatingToggle();
 
@@ -877,8 +851,8 @@ function showLitBFSectionContent(bookId, sectionName) {
             itemDiv.className = "item";
             itemDiv.innerText = sub.subsection;
             itemDiv.onclick = () => {
-                navigationStack.push(() => showLitBFSectionContent(bookId, sectionName));
-                showLitBFSubsectionContent(bookId, sectionName, idx);
+                navigationStack.push(() => showSectionContent(bookId, sectionName));
+                showSubsectionContent(bookId, sectionName, idx);
             };
             container.appendChild(itemDiv);
         });
@@ -887,8 +861,8 @@ function showLitBFSectionContent(bookId, sectionName) {
         currentTitleIndex = -1; // not currently on a subsection
         currentContentHtml = null;
     } else {
-        currentTitlesList = litbfContents.map((s, idx) => ({ id: idx }));
-        currentTitleIndex = litbfContents.findIndex(s => s.section === sectionName);
+        currentTitlesList = contents.map((s, idx) => ({ id: idx }));
+        currentTitleIndex = contents.findIndex(s => s.section === sectionName);
         currentContentHtml = sectionObj.content || null;
         renderContent(currentContentHtml);
     }
@@ -898,17 +872,18 @@ function showLitBFSectionContent(bookId, sectionName) {
 
 
 
-function showLitBFSubsectionContent(bookId, sectionName, subsectionIndex) {
+function showSubsectionContent(bookId, sectionName, subsectionIndex) {
     const book = books.find(b => b.id == bookId);
     if (!book) return;
+    const contents = getBookData(book);
 
-    const sectionObj = litbfContents.find(s => s.section === sectionName);
+    const sectionObj = contents.find(s => s.section === sectionName);
     if (!sectionObj || !sectionObj.subsections) return;
     const sub = sectionObj.subsections[subsectionIndex];
     if (!sub) return;
 
-    currentLitBFSectionName = sectionName;
-    currentView = () => showLitBFSubsectionContent(bookId, sectionName, subsectionIndex);
+    currentSectionName = sectionName;
+    currentView = () => showSubsectionContent(bookId, sectionName, subsectionIndex);
     updateHeader(sectionName, book.name);
     removeFloatingToggle();
 
@@ -916,7 +891,9 @@ function showLitBFSubsectionContent(bookId, sectionName, subsectionIndex) {
     const sectionContainer = document.getElementById("sectionSearchContainer");
     if (sectionContainer) sectionContainer.style.display = "none";
 
-    currentContentHtml = sub.content;
+    currentContentHtml = isLHFBook(book) ?
+        `<h2 class="title">${sub.subsection}</h2>` + sub.content
+        : sub.content;
     currentTitlesList = sectionObj.subsections.map((_, idx) => ({ id: idx }));
     currentTitleIndex = subsectionIndex;
 
